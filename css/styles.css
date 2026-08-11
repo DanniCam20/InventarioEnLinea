@@ -295,9 +295,8 @@ body{
 }
 
 
-
 /* ======================================================== */
-/* VISTAS */
+/* VISTAS                                                   */
 /* ======================================================== */
 
 /* ========================= */
@@ -338,6 +337,7 @@ body{
     /* ========================= */
 
     .usuario {
+        margin-left: auto;
         margin-right: 0;
         padding: 6px;
     }
@@ -345,8 +345,8 @@ body{
     .usuario > i {
         width: 30px;
         height: 30px;
-        font-size: 14px;
         margin-right: 0;
+        font-size: 14px;
     }
 
     .usuario-info {
@@ -389,7 +389,10 @@ body{
     /* ========================= */
 
     .opcion {
-        width: 70%;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 300px;
+
         padding: 30px 25px;
         margin: 5px 0;
     }
@@ -406,6 +409,7 @@ body{
         font-size: 13px;
     }
 
+
     /* ========================= */
     /* ACTIVIDAD RECIENTE        */
     /* ========================= */
@@ -421,12 +425,19 @@ body{
     }
 
     .actividad-item {
+        box-sizing: border-box;
+        width: 100%;
         padding: 12px 15px;
     }
 
     .actividad-item > i {
+        flex-shrink: 0;
         font-size: 22px;
         margin-right: 12px;
+    }
+
+    .actividad-item div {
+        min-width: 0;
     }
 
     .actividad-item strong {
@@ -438,19 +449,22 @@ body{
     }
 
     .actividad-item > span {
+        flex-shrink: 0;
         font-size: 11px;
+        margin-left: 8px;
     }
 
-      /* ========================= */
+
+    /* ========================= */
     /* EN DESARROLLO             */
     /* ========================= */
 
     .en-desarrollo {
+        padding: 70px 20px;
         font-size: 13px;
     }
 
     .en-desarrollo i {
         font-size: 15px;
     }
-
 }
