@@ -4,7 +4,9 @@ body{
     justify-content: center;
 }
 
-/* COMPONENTES DEL HEADER  */
+/* ====================== */
+/* COMPONENTES DEL HEADER */
+/* ====================== */
 
 .header{
     display: flex;
@@ -42,6 +44,65 @@ body{
     color: #666;
 }
 
+/* ========================= */
+/* USUARIO                   */
+/* ========================= */
+
+.usuario {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ICONO DEL USUARIO */
+
+.usuario > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background-color: #a1c247;
+    color: white;
+
+    font-size: 17px;
+}
+
+/* INFORMACIÓN DEL USUARIO*/
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.usuario-info strong {
+    color: rgb(8, 99, 23);
+    font-size: 14px;
+}
+
+.usuario-info span {
+    color: #666;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* ==================== */
+/* Titulos Categorias */
+/* ==================== */
+
+
 .categoria{
     margin: 15px auto;
     margin-top: 100px;
@@ -62,7 +123,10 @@ body{
     margin-top: 5px;
 }
 
+
+/* =================== */
 /* MENU DE OPCIONES */
+/* =================== */
 
 .opciones{
     background-color: #cbdfbc21;
@@ -96,12 +160,12 @@ body{
 
 .opcion i {
     font-size: 45px;
-    margin-bottom: 15px;
 }
 
 .opcion h3{
     font-weight: bold;
     color: rgb(8, 99, 23);
+    margin-top: 0;
 }
 
 .opcion p{
@@ -122,6 +186,85 @@ body{
     text-decoration: none;
 }
 
+
+/* ========================= */
+/* ACTIVIDAD RECIENTE        */
+/* ========================= */
+
+.actividad {
+    width: 1200px;
+    margin: 60px auto;
+    text-align: left;
+}
+
+/* ELEMENTO DE ACTIVIDAD */
+
+.actividad-item {
+    display: flex;
+    align-items: center;
+
+    background-color: #d7eec6bf;
+    border-radius: 10px;
+
+    padding: 15px 20px;
+    margin-bottom: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+
+/* ICONO */
+
+.actividad-item > i {
+    font-size: 25px;
+    color: rgb(8, 99, 23);
+
+    margin-right: 15px;
+}
+
+
+/* INFORMACIÓN */
+
+.actividad-item div {
+    flex: 1;
+}
+
+.actividad-item strong {
+    display: block;
+    color: rgb(8, 99, 23);
+    font-size: 15px;
+}
+
+.actividad-item p {
+    margin: 4px 0 0;
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* TIEMPO */
+
+.actividad-item > span {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.actividad-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* ============== */
+/* EN DESARROLLO  */
+/* ============== */
+
 .en-desarrollo {
     display: flex;
     align-items: center;
@@ -130,6 +273,10 @@ body{
 
     color: #666;
     font-size: 14px;
+
+    padding:100px;
+
+   
 }
 
 .en-desarrollo i {
@@ -147,13 +294,21 @@ body{
     }
 }
 
+
+
+/* ======================================================== */
+/* VISTAS */
+/* ======================================================== */
+
 /* ========================= */
-/*      CELULARES            */
+/* VISTA CELULARES           */
 /* ========================= */
 
 @media (max-width: 600px) {
 
-    /* HEADER */
+    /* ========================= */
+    /* HEADER                    */
+    /* ========================= */
 
     .header {
         padding: 10px 15px;
@@ -178,7 +333,30 @@ body{
     }
 
 
-    /* CATEGORÍAS */
+    /* ========================= */
+    /* USUARIO                   */
+    /* ========================= */
+
+    .usuario {
+        margin-right: 0;
+        padding: 6px;
+    }
+
+    .usuario > i {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .usuario-info {
+        display: none;
+    }
+
+
+    /* ========================= */
+    /* CATEGORÍAS                */
+    /* ========================= */
 
     .categoria {
         width: auto;
@@ -191,7 +369,9 @@ body{
     }
 
 
-    /* MENÚ DE OPCIONES */
+    /* ========================= */
+    /* MENÚ DE OPCIONES          */
+    /* ========================= */
 
     .opciones {
         flex-direction: column;
@@ -204,7 +384,9 @@ body{
     }
 
 
-    /* TARJETAS */
+    /* ========================= */
+    /* TARJETAS                  */
+    /* ========================= */
 
     .opcion {
         width: 70%;
@@ -224,8 +406,44 @@ body{
         font-size: 13px;
     }
 
+    /* ========================= */
+    /* ACTIVIDAD RECIENTE        */
+    /* ========================= */
 
-    /* EN DESARROLLO */
+    .actividad {
+        width: auto;
+        margin: 40px 20px;
+    }
+
+    .actividad h2 {
+        margin-left: 0;
+        font-size: 20px;
+    }
+
+    .actividad-item {
+        padding: 12px 15px;
+    }
+
+    .actividad-item > i {
+        font-size: 22px;
+        margin-right: 12px;
+    }
+
+    .actividad-item strong {
+        font-size: 14px;
+    }
+
+    .actividad-item p {
+        font-size: 12px;
+    }
+
+    .actividad-item > span {
+        font-size: 11px;
+    }
+
+      /* ========================= */
+    /* EN DESARROLLO             */
+    /* ========================= */
 
     .en-desarrollo {
         font-size: 13px;
@@ -236,4 +454,3 @@ body{
     }
 
 }
-

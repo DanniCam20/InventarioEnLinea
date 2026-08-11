@@ -3,18 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <script src="../js/productos.js"></script>
     <title>Productos</title>
 </head>
 <body>
-     <!-- HEADER -->
+    <!-- HEADER -->
     <header class="header">
-        <h1>
-            Dashboard En blanco
-        </h1>
-        <p>
-            Esta pantalla está en proceso de desarrollo,
-            poco a poco se cambiarán los elementos.
-        </p>
+
+        <!-- ICONO VOLVER  -->
+       <a href="../index.html" class="btn-volver">
+           <i class="fi fi-sr-arrow-left"></i>
+       </a>
+
+        <!-- ICONO PRINCIPAL -->
+        <i class="fi fi-sr-box-alt icono"></i>
+        
+        <!-- INFORMACION -->
+        <div class="header-text">
+            <h1>
+                Registra y gestiona productos  
+            </h1>
+        </div>
+
+        <!-- INFORMACIÓN DEL USUARIO -->
+        <div class="usuario">
+
+            <i class="fi fi-sr-user"></i>
+
+            <div class="usuario-info">
+                <strong>Administrador</strong>
+                <span>Usuario del sistema</span>
+            </div>
+
+        </div>
+
     </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+     <main class="main">
+
+        <!-- CONTENIDO DE FORMLARIO  -->
+        <div class="cont-formulario">
+
+            <form action="" method="" class="formulario">
+
+                <div class="campo">
+                    <label for=""> Nombre de produto </label>
+                    <input type="text" class="input-formulario">
+                </div>
+
+                <div class="campo">
+                    <label for=""> Cantidad entrante </label>
+                    <input type="number" class="input-formulario">
+                </div>
+
+                <div class="campo">
+                    <label for=""> Valor Unitario </label>
+                    <input type="number" min="0" step="0.01" class="input-formulario">
+                </div>
+
+                <div class="campo">
+                    <label for=""> Proovedor </label>
+                    <input type="text" class="input-formulario">
+                </div>
+
+                <button type="submit" class="btn-guardar"> Guardar Producto </button>
+
+            </form>
+
+        </div>
+
+     </main>
+
 </body>
 </html>

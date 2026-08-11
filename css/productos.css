@@ -1,0 +1,329 @@
+body{
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+/* ====================== */
+/* COMPONENTES DEL HEADER */
+/* ====================== */
+
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #d4f0be;
+    padding: 10px;
+}
+
+/* ICONO VOLVER */
+
+.btn-volver {
+
+    background-color: aliceblue;
+    border-radius: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    margin-left: 12px;
+    margin-right: 20px;
+
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.btn-volver:hover{
+    background-color: rgba(46, 187, 69, 0.199);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.btn-volver i {
+    margin-top: 6px;
+    font-size: 18px;
+    color: rgb(8, 99, 23);
+}
+
+.icono {
+    
+    margin-top: 8px;
+    font-size: 40px;
+    color: rgb(8, 99, 23);
+}
+
+.header-text {
+    margin-left: 16px;
+}
+
+.header h1 {
+    margin: 0;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+
+/*        USUARIO       */
+
+
+.usuario {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ICONO DEL USUARIO */
+
+.usuario > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background-color: #a1c247;
+    color: white;
+
+    font-size: 17px;
+}
+
+/* INFORMACIÓN DEL USUARIO*/
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.usuario-info strong {
+    color: rgb(8, 99, 23);
+    font-size: 14px;
+}
+
+.usuario-info span {
+    color: #666;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* ====================== */
+/* FORMULARIO DE PRODUCTOS */
+/* ====================== */
+
+.cont-formulario{
+    margin: 100px;
+    margin-top: 70px;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #d4f0be;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-formulario {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.btn-guardar{
+   
+    background-color: #fefffdbf;
+    border-radius: 10px;
+
+    padding: 15px 20px;
+    margin-bottom: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+.btn-guardar:hover {
+    background-color: #ccc;
+    transform: translateY(-4px) scale(1.02);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================== */
+/* VISTAS                                                   */
+/* ======================================================== */
+
+/* ========================= */
+/* VISTA CELULARES           */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    /* ========================= */
+    /* HEADER                    */
+    /* ========================= */
+
+    .header {
+        padding: 10px 12px;
+    }
+
+
+    /* BOTÓN VOLVER */
+
+    .btn-volver {
+        width: 24px;
+        height: 24px;
+
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .btn-volver i {
+        margin-top: 4px;
+        font-size: 16px;
+    }
+
+
+    /* ICONO PRINCIPAL */
+
+    .icono {
+        margin-top: 5px;
+        font-size: 32px;
+    }
+
+
+    /* TEXTO DEL HEADER */
+
+    .header-text {
+        margin-left: 10px;
+    }
+
+    .header h1 {
+        font-size: 17px;
+        line-height: 1.1;
+    }
+
+
+    /* ========================= */
+    /* USUARIO                   */
+    /* ========================= */
+
+    .usuario {
+        margin-right: 0;
+        padding: 5px;
+    }
+
+    .usuario > i {
+        width: 30px;
+        height: 30px;
+
+        margin-right: 0;
+
+        font-size: 14px;
+    }
+
+    /* Ocultamos el texto para ahorrar espacio */
+
+    .usuario-info {
+        display: none;
+    }
+
+
+    /* ========================= */
+    /* FORMULARIO                */
+    /* ========================= */
+
+    .cont-formulario {
+        width: auto;
+
+        margin: 40px 20px 20px;
+
+        padding: 20px;
+    }
+
+
+    /* ========================= */
+    /* CAMPOS                    */
+    /* ========================= */
+
+    .formulario {
+        gap: 15px;
+    }
+
+    .campo {
+        gap: 6px;
+    }
+
+    .input-formulario {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+
+    /* ========================= */
+    /* BOTÓN GUARDAR             */
+    /* ========================= */
+
+    .btn-guardar {
+        width: 100%;
+
+        padding: 12px 15px;
+
+        margin-bottom: 0;
+
+        font-size: 14px;
+    }
+
+}
