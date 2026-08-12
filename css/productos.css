@@ -396,81 +396,87 @@ body{
 
         border-radius: 10px;
     }
-
-
 /* ========================= */
-/* TABLA                     */
+/* TABLA EN CELULAR          */
 /* ========================= */
-
 
 .cont-tabla {
-        padding: 8px;
-    }
+    width: calc(100% - 40px);
+    box-sizing: border-box;
 
-    .table {
-        min-width: 450px;
-    }
+    height: auto;
 
-    .encabezados th,
-    .filas td {
-        padding: 9px 6px;
-        font-size: 11px;
-    }
+    margin: 20px 0;
+    padding: 10px;
 
+    border-radius: 10px;
 
-
-
-/* TABLA */
+    overflow: hidden;
+}
 
 .table {
     width: 100%;
-    min-width: 500px;
+    min-width: 0;
+
+    table-layout: fixed;
 
     border-collapse: separate;
-    border-spacing: 0 6px;
+    border-spacing: 0 5px;
 }
 
 
-/* ENCABEZADOS */
+/* ========================= */
+/* ENCABEZADOS               */
+/* ========================= */
 
 .encabezados th {
-    padding: 10px 8px;
+    padding: 10px 4px;
 
     font-size: 12px;
 
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
 }
 
 
-/* PRIMER ENCABEZADO */
-
-.encabezados th:first-child {
-    border-radius: 8px 0 0 8px;
-}
-
-
-/* ÚLTIMO ENCABEZADO */
-
-.encabezados th:last-child {
-    border-radius: 0 8px 8px 0;
-}
-
-
-/* FILAS */
+/* ========================= */
+/* FILAS                     */
+/* ========================= */
 
 .filas td {
-    padding: 12px 8px;
+    padding: 12px 4px;
 
     font-size: 12px;
 
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+
+    text-align: center;
 }
 
 
-/* HOVER */
+/* ========================= */
+/* ANCHO DE LAS COLUMNAS     */
+/* ========================= */
 
-.filas:hover td {
-    background-color: #d4f0be4d;
+.encabezados th:nth-child(1),
+.filas td:nth-child(1) {
+    width: 27%;
+}
+
+.encabezados th:nth-child(2),
+.filas td:nth-child(2) {
+    width: 18%;
+}
+
+.encabezados th:nth-child(3),
+.filas td:nth-child(3) {
+    width: 25%;
+}
+
+.encabezados th:nth-child(4),
+.filas td:nth-child(4) {
+    width: 30%;
 }
 
 }
