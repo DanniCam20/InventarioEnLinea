@@ -42,40 +42,118 @@
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
-     <main class="main">
+    <main class="main">     
 
-        <!-- CONTENIDO DE FORMLARIO  -->
-        <div class="cont-formulario">
+        <div class="formulario-y-tabla">
 
-            <form action="" method="" class="formulario">
+            <!-- CONTENIDO DE FORMLARIO  -->
+            <div class="cont-formulario">
 
-                <div class="campo">
-                    <label for=""> Nombre de produto </label>
-                    <input type="text" class="input-formulario">
-                </div>
+                 <form action="" method="" class="formulario">
 
-                <div class="campo">
-                    <label for=""> Cantidad entrante </label>
-                    <input type="number" class="input-formulario">
-                </div>
+                     <div class="campo">
+                         <label for=""> Nombre de produto </label>
+                         <input type="text" class="input-formulario">
+                     </div>
 
-                <div class="campo">
-                    <label for=""> Valor Unitario </label>
-                    <input type="number" min="0" step="0.01" class="input-formulario">
-                </div>
+                     <div class="campo">
+                         <label for=""> Cantidad entrante </label>
+                         <input type="number" class="input-formulario">
+                     </div>
 
-                <div class="campo">
-                    <label for=""> Proovedor </label>
-                    <input type="text" class="input-formulario">
-                </div>
+                     <div class="campo">
+                         <label for=""> Valor Unitario </label>
+                         <input type="number" min="0" step="0.01" class="input-formulario">
+                     </div>
 
-                <button type="submit" class="btn-guardar"> Guardar Producto </button>
+                     <div class="campo">
+                         <label for=""> Proovedor </label>
+                         <input type="text" class="input-formulario">
+                     </div>
 
-            </form>
+                     <button type="submit" class="btn-guardar"> Guardar Producto </button>
 
+                 </form>
+
+            </div>
+
+            <!-- TABLA Y CONTENIDO -->
+            <div class="cont-tabla">
+
+                <table class="table">
+
+                    <!-- ENCABEZADOS DE LA TABLA -->
+                    <thead class="encabezados">
+                        <th>
+                            Productos
+                        </th>
+                        <th>
+                            Cantidad
+                        </th>
+                        <th>
+                            Valor Unitario
+                        </th>
+                        <th>
+                            Proveedor  
+                        </th>
+                    </thead>
+
+                    <tbody>
+                        <tr class="filas">
+                            <td>
+                                Desktop DELL
+                            </td>
+                            <td>
+                                120
+                            </td>
+                            <td>
+                                1200
+                            </td>
+                            <td>
+                                Celu-Fer SAS
+                            </td>
+                        </tr>
+
+                        <tr class="filas">
+                            <td>
+                                Desktop DELL 
+                            </td>
+                            <td>
+                                120
+                            </td>
+                            <td>
+                                1200
+                            </td>
+                            <td>
+                                Celu-Fer SAS
+                            </td>
+                            
+                        </tr>
+
+                        <tr class="filas">
+                            <td>
+                                Desktop DELL
+                            </td>
+                            <td>
+                                120
+                            </td>
+                            <td>
+                                1200
+                            </td>
+                            <td>
+                                Celu-Fer SAS
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+            
         </div>
 
-     </main>
+    </main>
 
 </body>
 </html>

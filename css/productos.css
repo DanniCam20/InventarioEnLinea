@@ -120,17 +120,35 @@ body{
 }
 
 /* ====================== */
-/* FORMULARIO DE PRODUCTOS */
+/* DIV DE FORMULARIO Y TABLA */
 /* ====================== */
 
+.formulario-y-tabla{
+    
+    display: flex;
+    justify-content: center;
+    
+    /* background-color: aqua; */
+
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* FORMULARIO DE PRODUCTOS */
+
+
 .cont-formulario{
-    margin: 100px;
-    margin-top: 70px;
+    margin: 50px;
+    margin-top: 20px;
+    /* margin-bottom: 10px; */
     width: 400px;
-    height: auto;
+    height: 400px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #d4f0be;
+    background-color: #d4f0be60;
+
 }
 
 .formulario{
@@ -173,15 +191,47 @@ body{
 }
 
 
+/*  TABLA */
+
+.cont-tabla{
+    margin-top: 20px;
+    width: 700px;
+    height: 550px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #d4f0be60;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.encabezados th {
+    background-color: #d4f0be;
+    color: rgb(8, 99, 23);
+    padding: 12px;
+}
+
+.encabezados th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.encabezados th:last-child {
+    border-radius: 0 10px 10px 0;
+}
 
 
+.filas td {
+    padding: 15px 10px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
 
-
-
-
-
-
-
+.filas:hover td {
+    background-color: #d4f0be4d;
+}
 
 
 
@@ -198,12 +248,8 @@ body{
 
 
 /* ======================================================== */
-/* VISTAS                                                   */
+/* VISTA CELULAR                                             */
 /* ======================================================== */
-
-/* ========================= */
-/* VISTA CELULARES           */
-/* ========================= */
 
 @media (max-width: 600px) {
 
@@ -212,18 +258,15 @@ body{
     /* ========================= */
 
     .header {
-        padding: 10px 12px;
+        padding: 10px;
     }
-
-
-    /* BOTÓN VOLVER */
 
     .btn-volver {
         width: 24px;
         height: 24px;
 
         margin-left: 0;
-        margin-right: 10px;
+        margin-right: 8px;
     }
 
     .btn-volver i {
@@ -231,23 +274,17 @@ body{
         font-size: 16px;
     }
 
-
-    /* ICONO PRINCIPAL */
-
     .icono {
         margin-top: 5px;
-        font-size: 32px;
+        font-size: 30px;
     }
 
-
-    /* TEXTO DEL HEADER */
-
     .header-text {
-        margin-left: 10px;
+        margin-left: 8px;
     }
 
     .header h1 {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.1;
     }
 
@@ -270,10 +307,20 @@ body{
         font-size: 14px;
     }
 
-    /* Ocultamos el texto para ahorrar espacio */
-
     .usuario-info {
         display: none;
+    }
+
+
+    /* ========================= */
+    /* FORMULARIO + TABLA        */
+    /* ========================= */
+
+    .formulario-y-tabla {
+        flex-direction: column;
+        align-items: center;
+
+        margin: 20px 0 40px;
     }
 
 
@@ -282,11 +329,16 @@ body{
     /* ========================= */
 
     .cont-formulario {
-        width: auto;
+        width: calc(100% - 40px);
 
-        margin: 40px 20px 20px;
+        box-sizing: border-box;
 
+        height: auto;
+
+        margin: 20px 0;
         padding: 20px;
+
+        border-radius: 10px;
     }
 
 
@@ -307,7 +359,6 @@ body{
         box-sizing: border-box;
 
         padding: 10px;
-
         font-size: 14px;
     }
 
@@ -318,6 +369,7 @@ body{
 
     .btn-guardar {
         width: 100%;
+        box-sizing: border-box;
 
         padding: 12px 15px;
 
@@ -325,5 +377,100 @@ body{
 
         font-size: 14px;
     }
+
+
+    /* ========================= */
+    /* CONTENEDOR DE TABLA       */
+    /* ========================= */
+
+    .cont-tabla {
+        width: calc(100% - 40px);
+
+        box-sizing: border-box;
+
+        height: auto;
+
+        margin: 20px 0;
+
+        padding: 15px;
+
+        border-radius: 10px;
+    }
+
+
+    /* ========================= */
+/* TABLA                     */
+/* ========================= */
+
+
+.cont-tabla {
+        padding: 8px;
+    }
+
+    .table {
+        min-width: 450px;
+    }
+
+    .encabezados th,
+    .filas td {
+        padding: 9px 6px;
+        font-size: 11px;
+    }
+
+
+
+
+/* TABLA */
+
+.table {
+    width: 100%;
+    min-width: 500px;
+
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+
+
+/* ENCABEZADOS */
+
+.encabezados th {
+    padding: 10px 8px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* PRIMER ENCABEZADO */
+
+.encabezados th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+
+/* ÚLTIMO ENCABEZADO */
+
+.encabezados th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+
+/* FILAS */
+
+.filas td {
+    padding: 12px 8px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* HOVER */
+
+.filas:hover td {
+    background-color: #d4f0be4d;
+}
 
 }
