@@ -2,6 +2,7 @@ body{
     margin: 0;
     text-align: center;
     justify-content: center;
+    
 }
 
 /* ====================== */
@@ -18,9 +19,9 @@ body{
 /* ICONO VOLVER */
 
 .btn-volver {
-
     background-color: aliceblue;
     border-radius: 240px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +48,6 @@ body{
 }
 
 .icono {
-    
     margin-top: 8px;
     font-size: 40px;
     color: rgb(8, 99, 23);
@@ -65,17 +65,20 @@ body{
 }
 
 
-
-/*        USUARIO       */
-
+/* ====================== */
+/* USUARIO                */
+/* ====================== */
 
 .usuario {
     display: flex;
     align-items: center;
+
     margin-left: auto;
     margin-right: 30px;
+
     padding: 8px 12px;
     border-radius: 10px;
+
     background-color: rgba(255, 255, 255, 0.35);
 }
 
@@ -100,7 +103,8 @@ body{
     font-size: 17px;
 }
 
-/* INFORMACIÓN DEL USUARIO*/
+
+/* INFORMACIÓN DEL USUARIO */
 
 .usuario-info {
     display: flex;
@@ -119,16 +123,14 @@ body{
     margin-top: 2px;
 }
 
-/* ====================== */
-/* DIV DE FORMULARIO Y TABLA */
-/* ====================== */
 
-.formulario-y-tabla{
-    
+/* ============================== */
+/* FORMULARIO + TABLA             */
+/* ============================== */
+
+.formulario-y-tabla {
     display: flex;
     justify-content: center;
-    
-    /* background-color: aqua; */
 
     margin: 10px;
     margin-top: 40px;
@@ -136,52 +138,60 @@ body{
 }
 
 
-/* FORMULARIO DE PRODUCTOS */
+/* ====================== */
+/* FORMULARIO             */
+/* ====================== */
 
-
-.cont-formulario{
+.cont-formulario {
     margin: 50px;
     margin-top: 20px;
-    /* margin-bottom: 10px; */
+
     width: 350px;
     height: auto;
+
     padding: 20px;
+
     border-radius: 10px;
+
     background-color: #d4f0be60;
 }
 
-.formulario{
+.formulario {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-.campo{
+.campo {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.campo label{
+.campo label {
     font-weight: 800;
     text-align: left;
 }
 
 .input-formulario {
     padding: 10px;
+
     border: 1px solid #ccc;
     border-radius: 6px;
+
     font-size: 15px;
     outline: none;
 }
 
-.btn-guardar{
-
+.btn-guardar {
     background-color: #fefffdbf;
+
     border-radius: 10px;
 
     padding: 15px 20px;
     margin-bottom: 12px;
+
+    border: none;
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
 
@@ -194,50 +204,77 @@ body{
 }
 
 
-/*  TABLA */
- 
-.cont-tabla{
+/* ====================== */
+/* TABLA                  */
+/* ====================== */
+
+.cont-tabla {
     margin-top: 20px;
+
     width: 800px;
     height: 550px;
+
     padding: 20px;
+
     border-radius: 10px;
+
     background-color: #d4f0be60;
 
     overflow-y: auto;
 }
 
-.barra-busqueda{
-    
+
+/* BÚSQUEDA */
+
+.barra-busqueda {
+    width: 100%;
 }
 
-.input-busqueda{
+.input-busqueda {
     padding: 5px;
+
     border: 1px solid #ccc;
     border-radius: 6px;
+
     font-size: 15px;
     outline: none;
-    margin: auto;
+
     width: 660px;
-    
 }
 
-.table caption{
-    font-size: 17px;
-    padding: 5px;
-    font-weight: bold;
-}
+
+/* TABLA */
 
 .table {
     width: 100%;
+
     border-collapse: separate;
     border-spacing: 0 10px;
 }
 
+
+/* CAPTION */
+
+.table caption {
+    font-size: 17px;
+    padding: 5px;
+
+    font-weight: bold;
+}
+
+
+/* ====================== */
+/* ENCABEZADOS            */
+/* ====================== */
+
 .encabezados th {
     background-color: #d4f0be;
+
     color: rgb(8, 99, 23);
+
     padding: 12px;
+
+    white-space: nowrap;
 }
 
 .encabezados th:first-child {
@@ -249,58 +286,81 @@ body{
 }
 
 
+/* ====================== */
+/* FILAS                  */
+/* ====================== */
+
 .filas td {
     padding: 15px 10px;
+
     background-color: white;
+
     border-bottom: 1px solid #ccc;
+
+    white-space: nowrap;
 }
 
 .filas:hover td {
     background-color: #d4f0be4d;
 }
 
-.btn-editar{
+
+/* ====================== */
+/* BOTÓN EDITAR           */
+/* ====================== */
+
+.btn-editar {
     background-color: #8f8989;
+
     border: none;
+
     padding: 5px 10px;
+
     border-radius: 6px;
+
+    cursor: pointer;
 }
 
-.btn-editar:active{
+.btn-editar:active {
     background-color: #4e4c4c;
-    
 }
 
 
-.btn-eliminar{
+/* ====================== */
+/* BOTÓN ELIMINAR         */
+/* ====================== */
+
+.btn-eliminar {
     background-color: rgb(243, 27, 27);
+
     border: none;
+
     padding: 5px 10px;
+
     border-radius: 6px;
+
+    cursor: pointer;
 }
 
-.btn-eliminar:active{
+.btn-eliminar:active {
     background-color: rgb(156, 31, 31);
 }
 
 
-
-
-
-
 /* ======================================================== */
-/* VISTA CELULAR                                             */
+/* VISTA CELULAR                                            */
 /* ======================================================== */
 
 @media (max-width: 700px) {
 
-    /* ========================= */
-    /* HEADER                    */
-    /* ========================= */
+    /* ====================== */
+    /* HEADER                 */
+    /* ====================== */
 
     .header {
         padding: 10px;
     }
+
 
     /* BOTÓN VOLVER */
 
@@ -317,6 +377,7 @@ body{
         font-size: 16px;
     }
 
+
     /* ICONO */
 
     .icono {
@@ -324,7 +385,8 @@ body{
         font-size: 30px;
     }
 
-    /* TEXTO DEL HEADER */
+
+    /* TEXTO */
 
     .header-text {
         margin-left: 8px;
@@ -335,9 +397,10 @@ body{
         line-height: 1.1;
     }
 
-    /* ========================= */
-    /* USUARIO                   */
-    /* ========================= */
+
+    /* ====================== */
+    /* USUARIO               */
+    /* ====================== */
 
     .usuario {
         margin-right: 0;
@@ -353,47 +416,42 @@ body{
         font-size: 14px;
     }
 
-    /* Ocultar información */
-
     .usuario-info {
         display: none;
     }
 
 
-    /* ========================= */
-    /* FORMULARIO + TABLA        */
-    /* ========================= */
+    /* ============================== */
+    /* FORMULARIO + TABLA             */
+    /* ============================== */
 
     .formulario-y-tabla {
         display: flex;
+
         flex-direction: column;
+
         align-items: center;
 
         margin: 20px 0 40px;
     }
 
 
-    /* ========================= */
-    /* FORMULARIO                */
-    /* ========================= */
+    /* ====================== */
+    /* FORMULARIO             */
+    /* ====================== */
 
     .cont-formulario {
-        width: calc(100% - 95px);
+        width: calc(100% - 40px);
 
         box-sizing: border-box;
 
         height: auto;
 
         margin: 20px 0;
-        padding: 20px;
 
-        border-radius: 10px;
+        padding: 20px;
     }
 
-
-    /* ========================= */
-    /* CAMPOS DEL FORMULARIO     */
-    /* ========================= */
 
     .formulario {
         gap: 15px;
@@ -405,6 +463,7 @@ body{
 
     .input-formulario {
         width: 100%;
+
         box-sizing: border-box;
 
         padding: 10px;
@@ -413,12 +472,13 @@ body{
     }
 
 
-    /* ========================= */
-    /* BOTÓN GUARDAR             */
-    /* ========================= */
+    /* ====================== */
+    /* BOTÓN GUARDAR          */
+    /* ====================== */
 
     .btn-guardar {
         width: 100%;
+
         box-sizing: border-box;
 
         padding: 12px 15px;
@@ -429,119 +489,100 @@ body{
     }
 
 
-    /* ========================= */
-    /* CONTENEDOR DE TABLA       */
-    /* ========================= */
+    /* ================================================== */
+    /* TABLA EN CELULAR                                   */
+    /* ================================================== */
 
     .cont-tabla {
-        width: calc(100% - 40px);
+        width: calc(100% - 30px);
 
         box-sizing: border-box;
 
-        height: 550px;
+        height: 500px;
 
         margin: 20px 0;
 
         padding: 15px;
 
         border-radius: 10px;
-        /* Desplazamiento horizontal */
-         overflow-x: auto;
 
-        /* Evita que la tabla se salga */
-        overflow: hidden;
+        /*
+         * La tabla conserva su tamaño.
+         * Solo el contenedor permite verla
+         * horizontalmente.
+         */
+        overflow-x: auto;
+        overflow-y: auto;
     }
 
 
-    /* ========================= */
-    /* TABLA                     */
-    /* ========================= */
+    /* ====================== */
+    /* TABLA                  */
+    /* ====================== */
 
     .table {
-        width: 140%;
-        min-width: 0;
+        /*
+         * Conservamos el tamaño normal
+         * de la tabla.
+         */
+        width: 200px;
 
-        table-layout: fixed;
+        min-width: 200px;
+
+        table-layout: auto;
 
         border-collapse: separate;
-        border-spacing: 0 7px;
+
+        border-spacing: 0 10px;
     }
 
 
-    /* ========================= */
-    /* ENCABEZADOS               */
-    /* ========================= */
+    /* ====================== */
+    /* ENCABEZADOS            */
+    /* ====================== */
 
     .encabezados th {
-        padding: 10px 4px;
+        padding: 12px;
 
-        font-size: 12px;
+        font-size: 13px;
 
-        white-space: normal;
-
-        word-break: break-word;
+        white-space: nowrap;
     }
 
-
-    /* PRIMER ENCABEZADO */
 
     .encabezados th:first-child {
-        border-radius: 8px 0 0 8px;
+        border-radius: 10px 0 0 10px;
     }
-
-
-    /* ÚLTIMO ENCABEZADO */
 
     .encabezados th:last-child {
-        border-radius: 0 8px 8px 0;
+        border-radius: 0 10px 10px 0;
     }
 
 
-    /* ========================= */
-    /* FILAS                     */
-    /* ========================= */
+    /* ====================== */
+    /* FILAS                  */
+    /* ====================== */
 
     .filas td {
-        padding: 12px 4px;
+        padding: 15px 10px;
 
-        font-size: 12px;
+        font-size: 13px;
 
-        white-space: normal;
-
-        word-break: break-word;
+        white-space: nowrap;
 
         text-align: center;
     }
 
 
+    /* ====================== */
+    /* BOTONES DE ACCIONES    */
+    /* ====================== */
 
-/* ========================= */
-/* ICONOS DE ACCIONES        */
-/* ========================= */
+    .btn-editar,
+    .btn-eliminar {
+        padding: 5px 8px;
 
-.btn-editar{
-    background-color: #8f8989;
-    border: none;
-    padding: 2px 3px;
-    border-radius: 6px;
-}
-
-.btn-editar:active{
-    background-color: #4e4c4c;
-    
-}
-
-
-.btn-eliminar{
-    background-color: rgb(243, 27, 27);
-    border: none;
-    padding: 2px 3px;
-    border-radius: 6px;
-}
-
-.btn-eliminar:active{
-    background-color: rgb(156, 31, 31);
-}
-
+        font-size: 12px;
+    }
 
 }
