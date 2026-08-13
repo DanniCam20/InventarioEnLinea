@@ -317,14 +317,12 @@ body{
         font-size: 16px;
     }
 
-
     /* ICONO */
 
     .icono {
         margin-top: 5px;
         font-size: 30px;
     }
-
 
     /* TEXTO DEL HEADER */
 
@@ -336,7 +334,6 @@ body{
         font-size: 16px;
         line-height: 1.1;
     }
-
 
     /* ========================= */
     /* USUARIO                   */
@@ -441,13 +438,15 @@ body{
 
         box-sizing: border-box;
 
-        height: auto;
+        height: 550px;
 
         margin: 20px 0;
 
-        padding: 10px;
+        padding: 15px;
 
         border-radius: 10px;
+        /* Desplazamiento horizontal */
+         overflow-x: auto;
 
         /* Evita que la tabla se salga */
         overflow: hidden;
@@ -555,7 +554,7 @@ body{
 .btn-editar{
     background-color: #8f8989;
     border: none;
-    padding: 5px 5px;
+    padding: 2px 3px;
     border-radius: 6px;
 }
 
@@ -568,7 +567,7 @@ body{
 .btn-eliminar{
     background-color: rgb(243, 27, 27);
     border: none;
-    padding: 5px 5px;
+    padding: 2px 3px;
     border-radius: 6px;
 }
 
