@@ -458,13 +458,13 @@ body{
     /* ========================= */
 
     .table {
-        width: 100%;
+        width: 140%;
         min-width: 0;
 
         table-layout: fixed;
 
         border-collapse: separate;
-        border-spacing: 0 5px;
+        border-spacing: 0 7px;
     }
 
 
@@ -514,38 +514,6 @@ body{
     }
 
 
-/* ========================= */
-/* ANCHO DE LAS COLUMNAS     */
-/* ========================= */
-
-.encabezados th:nth-child(1),
-.filas td:nth-child(1) {
-    width: 24%;
-}
-
-.encabezados th:nth-child(2),
-.filas td:nth-child(2) {
-    width: 16%;
-}
-
-.encabezados th:nth-child(3),
-.filas td:nth-child(3) {
-    width: 22%;
-}
-
-.encabezados th:nth-child(4),
-.filas td:nth-child(4) {
-    width: 23%;
-}
-
-.encabezados th:nth-child(5),
-.filas td:nth-child(5) {
-    width: 15%;
-}
-.encabezados th:nth-child(6),
-.filas td:nth-child(6) {
-    width: 15%;
-}
 
 /* ========================= */
 /* ICONOS DE ACCIONES        */
