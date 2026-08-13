@@ -143,12 +143,11 @@ body{
     margin: 50px;
     margin-top: 20px;
     /* margin-bottom: 10px; */
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: auto;
     padding: 20px;
     border-radius: 10px;
     background-color: #d4f0be60;
-
 }
 
 .formulario{
@@ -163,17 +162,21 @@ body{
     gap: 6px;
 }
 
+.campo label{
+    font-weight: 800;
+    text-align: left;
+}
+
 .input-formulario {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 15px;
     outline: none;
-    transition: border-color 0.2s;
 }
 
 .btn-guardar{
-   
+
     background-color: #fefffdbf;
     border-radius: 10px;
 
@@ -192,14 +195,37 @@ body{
 
 
 /*  TABLA */
-
+ 
 .cont-tabla{
     margin-top: 20px;
-    width: 700px;
+    width: 800px;
     height: 550px;
     padding: 20px;
     border-radius: 10px;
     background-color: #d4f0be60;
+
+    overflow-y: auto;
+}
+
+.barra-busqueda{
+    
+}
+
+.input-busqueda{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    margin: auto;
+    width: 660px;
+    
+}
+
+.table caption{
+    font-size: 17px;
+    padding: 5px;
+    font-weight: bold;
 }
 
 .table {
@@ -233,14 +259,29 @@ body{
     background-color: #d4f0be4d;
 }
 
+.btn-editar{
+    background-color: #8f8989;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.btn-editar:active{
+    background-color: #4e4c4c;
+    
+}
 
 
+.btn-eliminar{
+    background-color: rgb(243, 27, 27);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
 
-
-
-
-
-
+.btn-eliminar:active{
+    background-color: rgb(156, 31, 31);
+}
 
 
 
@@ -261,6 +302,8 @@ body{
         padding: 10px;
     }
 
+    /* BOTÓN VOLVER */
+
     .btn-volver {
         width: 24px;
         height: 24px;
@@ -274,10 +317,16 @@ body{
         font-size: 16px;
     }
 
+
+    /* ICONO */
+
     .icono {
         margin-top: 5px;
         font-size: 30px;
     }
+
+
+    /* TEXTO DEL HEADER */
 
     .header-text {
         margin-left: 8px;
@@ -307,6 +356,8 @@ body{
         font-size: 14px;
     }
 
+    /* Ocultar información */
+
     .usuario-info {
         display: none;
     }
@@ -317,6 +368,7 @@ body{
     /* ========================= */
 
     .formulario-y-tabla {
+        display: flex;
         flex-direction: column;
         align-items: center;
 
@@ -329,7 +381,7 @@ body{
     /* ========================= */
 
     .cont-formulario {
-        width: calc(100% - 40px);
+        width: calc(100% - 95px);
 
         box-sizing: border-box;
 
@@ -343,7 +395,7 @@ body{
 
 
     /* ========================= */
-    /* CAMPOS                    */
+    /* CAMPOS DEL FORMULARIO     */
     /* ========================= */
 
     .formulario {
@@ -359,6 +411,7 @@ body{
         box-sizing: border-box;
 
         padding: 10px;
+
         font-size: 14px;
     }
 
@@ -392,67 +445,74 @@ body{
 
         margin: 20px 0;
 
-        padding: 15px;
+        padding: 10px;
 
         border-radius: 10px;
+
+        /* Evita que la tabla se salga */
+        overflow: hidden;
     }
-/* ========================= */
-/* TABLA EN CELULAR          */
-/* ========================= */
-
-.cont-tabla {
-    width: calc(100% - 40px);
-    box-sizing: border-box;
-
-    height: auto;
-
-    margin: 20px 0;
-    padding: 10px;
-
-    border-radius: 10px;
-
-    overflow: hidden;
-}
-
-.table {
-    width: 100%;
-    min-width: 0;
-
-    table-layout: fixed;
-
-    border-collapse: separate;
-    border-spacing: 0 5px;
-}
 
 
-/* ========================= */
-/* ENCABEZADOS               */
-/* ========================= */
+    /* ========================= */
+    /* TABLA                     */
+    /* ========================= */
 
-.encabezados th {
-    padding: 10px 4px;
+    .table {
+        width: 100%;
+        min-width: 0;
 
-    font-size: 12px;
+        table-layout: fixed;
 
-    white-space: normal;
-    word-break: break-word;
-}
+        border-collapse: separate;
+        border-spacing: 0 5px;
+    }
 
 
-/* ========================= */
-/* FILAS                     */
-/* ========================= */
+    /* ========================= */
+    /* ENCABEZADOS               */
+    /* ========================= */
 
-.filas td {
-    padding: 12px 4px;
+    .encabezados th {
+        padding: 10px 4px;
 
-    font-size: 12px;
+        font-size: 12px;
 
-    white-space: normal;
-    word-break: break-word;
+        white-space: normal;
 
-    text-align: center;
-}
+        word-break: break-word;
+    }
+
+
+    /* PRIMER ENCABEZADO */
+
+    .encabezados th:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+
+
+    /* ÚLTIMO ENCABEZADO */
+
+    .encabezados th:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+
+
+    /* ========================= */
+    /* FILAS                     */
+    /* ========================= */
+
+    .filas td {
+        padding: 12px 4px;
+
+        font-size: 12px;
+
+        white-space: normal;
+
+        word-break: break-word;
+
+        text-align: center;
+    }
 
 
 /* ========================= */
@@ -461,22 +521,60 @@ body{
 
 .encabezados th:nth-child(1),
 .filas td:nth-child(1) {
-    width: 27%;
+    width: 24%;
 }
 
 .encabezados th:nth-child(2),
 .filas td:nth-child(2) {
-    width: 18%;
+    width: 16%;
 }
 
 .encabezados th:nth-child(3),
 .filas td:nth-child(3) {
-    width: 25%;
+    width: 22%;
 }
 
 .encabezados th:nth-child(4),
 .filas td:nth-child(4) {
-    width: 30%;
+    width: 23%;
 }
+
+.encabezados th:nth-child(5),
+.filas td:nth-child(5) {
+    width: 15%;
+}
+.encabezados th:nth-child(6),
+.filas td:nth-child(6) {
+    width: 15%;
+}
+
+/* ========================= */
+/* ICONOS DE ACCIONES        */
+/* ========================= */
+
+.btn-editar{
+    background-color: #8f8989;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 6px;
+}
+
+.btn-editar:active{
+    background-color: #4e4c4c;
+    
+}
+
+
+.btn-eliminar{
+    background-color: rgb(243, 27, 27);
+    border: none;
+    padding: 5px 5px;
+    border-radius: 6px;
+}
+
+.btn-eliminar:active{
+    background-color: rgb(156, 31, 31);
+}
+
 
 }

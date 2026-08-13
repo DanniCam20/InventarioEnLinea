@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/productos.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
-    <script src="../js/productos.js"></script>
     <title>Productos</title>
 </head>
 <body>
@@ -53,67 +52,60 @@
 
                      <div class="campo">
                          <label for=""> Nombre de produto </label>
-                         <input type="text" class="input-formulario">
+                         <input type="text" class="input-formulario" id="produto" placeholder="Ej. Portátil">
                      </div>
 
                      <div class="campo">
-                         <label for=""> Cantidad entrante </label>
-                         <input type="number" class="input-formulario">
+                         <label for=""> Stock </label>
+                         <input type="number" class="input-formulario" id="stock" placeholder="Ej. 100">
+                     </div>
+
+                     <div class="campo">
+                         <label for=""> Categoría </label>
+                         <input type="text" class="input-formulario" id="categoria" placeholder="Ej. .....">
                      </div>
 
                      <div class="campo">
                          <label for=""> Valor Unitario </label>
-                         <input type="number" min="0" step="0.01" class="input-formulario">
+                         <input type="number" min="0" step="0.01" class="input-formulario" id="valor" placeholder="Ej. $ 12.000">
                      </div>
 
                      <div class="campo">
                          <label for=""> Proovedor </label>
-                         <input type="text" class="input-formulario">
+                         <input type="text" class="input-formulario" id="proveedor" placeholder="Ej. Colombia SAS">
                      </div>
 
-                     <button type="submit" class="btn-guardar"> Guardar Producto </button>
+                     <button type="submit" id="btn-guardar" class="btn-guardar"> Guardar Producto </button>
 
                  </form>
 
             </div>
 
+            
+
             <!-- TABLA Y CONTENIDO -->
             <div class="cont-tabla">
 
+                <input type="search" class="input-busqueda">
+
                 <table class="table">
+      
+                    <caption>  Productos Regitrados </caption>
 
                     <!-- ENCABEZADOS DE LA TABLA -->
                     <thead class="encabezados">
-                        <th>
-                            Productos
-                        </th>
-                        <th>
-                            Cantidad
-                        </th>
-                        <th>
-                            Valor Unitario
-                        </th>
-                        <th>
-                            Proveedor  
-                        </th>
+                        <tr>
+                            <th>Productos</th>
+                            <th>Stock</th>
+                            <th>Categoria</th>
+                            <th>Valor Unitario</th>
+                            <th>Proveedor</th>
+                            <th>Acciones</th>
+                        </tr> 
                     </thead>
 
-                    <tbody>
-                        <tr class="filas">
-                            <td>
-                                Desktop DELL
-                            </td>
-                            <td>
-                                120
-                            </td>
-                            <td>
-                                1200
-                            </td>
-                            <td>
-                                Celu-Fer SAS
-                            </td>
-                        </tr>
-
+                    <tbody id="tabla-productos">
+                    
                         <tr class="filas">
                             <td>
                                 Desktop DELL 
@@ -121,11 +113,24 @@
                             <td>
                                 120
                             </td>
+                             <td>
+                                PC
+                            </td> 
                             <td>
                                 1200
                             </td>
                             <td>
                                 Celu-Fer SAS
+                            </td>
+
+                            <!-- BOTONES DE ACCIONES -->
+                            <td>
+                                <button class="btn-editar">
+                                    <i class="fi fi-sr-pencil"></i>
+                                </button>
+                                <button class="btn-eliminar">
+                                    <i class="fi fi-sr-trash"></i>
+                                </button>
                             </td>
                             
                         </tr>
@@ -140,20 +145,68 @@
                             <td>
                                 1200
                             </td>
+                             <td>
+                                PC
+                            </td>
                             <td>
                                 Celu-Fer SAS
                             </td>
+
+                            <!-- BOTONES DE ACCIONES -->
+                            <td>
+                                <button class="btn-editar">
+                                    <i class="fi fi-sr-pencil"></i>
+                                </button>
+                                <button class="btn-eliminar">
+                                    <i class="fi fi-sr-trash"></i>
+                                </button>
+                            </td>
+                        </tr>   
+
+                        <tr class="filas">
+                            <td>
+                                Desktop DELL
+                            </td>
+                            <td>
+                                120
+                            </td>
+                             <td>
+                                PC
+                            </td> 
+                            <td>
+                                1200
+                            </td>
+                            <td>
+                                Celu-Fer SAS
+                            </td>
+
+                            <!-- BOTONES DE ACCIONES -->
+                            <td>
+                                <button class="btn-editar">
+                                    <i class="fi fi-sr-pencil"></i>
+                                </button>
+                                <button class="btn-eliminar">
+                                    <i class="fi fi-sr-trash"></i>
+                                </button>
+                            </td>
                             
-                        </tr>
+                        </tr>    
+
                     </tbody>
 
                 </table>
 
-            </div>
+                
+
+            </div>   
             
         </div>
 
-    </main>
+        <div class="barra-busqqueda">
+            <input type="search" class="input-busqueda">
+        </div>
 
+    </main>
+<script src="../js/productos.js"></script>
 </body>
 </html>
