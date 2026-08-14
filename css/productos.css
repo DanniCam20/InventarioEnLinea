@@ -206,7 +206,7 @@ body{
 /* Mensaje de guardado y actualizado */
 
 .mensaje {
-    /* display: none; */
+    display: none;
 
     
     padding: 10px;
