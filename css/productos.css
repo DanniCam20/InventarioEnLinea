@@ -203,6 +203,25 @@ body{
     transform: translateY(-4px) scale(1.02);
 }
 
+/* Mensaje de guardado y actualizado */
+
+.mensaje {
+    /* display: none; */
+
+    
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: 1px solid #368a48;
+
+    background-color: #d4f0be;
+    color: rgb(8, 99, 23);
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
 
 /* ====================== */
 /* TABLA                  */

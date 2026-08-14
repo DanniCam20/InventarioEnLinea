@@ -52,7 +52,7 @@
 
                      <div class="campo">
                          <label for=""> Nombre de produto </label>
-                         <input type="text" class="input-formulario" id="produto" placeholder="Ej. Portátil">
+                         <input type="text" class="input-formulario" id="producto" placeholder="Ej. Portátil">
                      </div>
 
                      <div class="campo">
@@ -62,7 +62,7 @@
 
                      <div class="campo">
                          <label for=""> Categoría </label>
-                         <input type="text" class="input-formulario" id="categoria" placeholder="Ej. TE AMO, MI FLACA ">
+                         <input type="text" class="input-formulario" id="categoria" placeholder="Ej. Producto, Stock, Categoria...">
                      </div>
 
                      <div class="campo">
@@ -70,12 +70,16 @@
                          <input type="number" min="0" step="0.01" class="input-formulario" id="valor" placeholder="Ej. $ 12.000">
                      </div>
 
-                     <div class="campo">
+                     <div class="campo"> 
                          <label for=""> Proovedor </label>
                          <input type="text" class="input-formulario" id="proveedor" placeholder="Ej. Colombia SAS">
                      </div>
 
                      <button type="submit" id="btn-guardar" class="btn-guardar"> Guardar Producto </button>
+
+                     <div id="mensaje" class="mensaje">
+                         Producto guardado correctamente
+                     </div>
 
                  </form>
 
@@ -92,7 +96,7 @@
                     </h3> 
 
                     <div class="barra-busqueda">
-                        <input type="search" class="input-busqueda" placeholder=" Filtrar por nombre...">
+                        <input type="search" class="input-busqueda" id="input-busqueda" placeholder=" Filtrar por nombre...">
                     </div>
                 </div>
 
@@ -117,16 +121,13 @@
                     </thead>
 
                     <tbody id="tabla-productos">
-                    
-                      
-                       
 
                         <tr class="filas">
                             <td>
                                 Desktop DELL
                             </td>
                             <td>
-                                120
+                                150 
                             </td>
                              <td>
                                 PC
