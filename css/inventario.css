@@ -1,0 +1,327 @@
+body{
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+/* ====================== */
+/* COMPONENTES DEL HEADER */
+/* ====================== */
+
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #d4f0be;
+    padding: 10px;
+}
+
+/* ICONO VOLVER */
+
+.btn-volver {
+    background-color: aliceblue;
+    border-radius: 240px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    margin-left: 12px;
+    margin-right: 20px;
+
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.btn-volver:hover{
+    background-color: rgba(46, 187, 69, 0.199);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.btn-volver i {
+    margin-top: 6px;
+    font-size: 18px;
+    color: rgb(8, 99, 23);
+}
+
+.icono {
+    margin-top: 8px;
+    font-size: 40px;
+    color: rgb(8, 99, 23);
+}
+
+.header-text {
+    margin-left: 16px;
+}
+
+.header h1 {
+    margin: 0;
+    text-align: left;
+    font-size: 25px;
+    line-height: 1;
+}
+
+
+/* ====================== */
+/* USUARIO                */
+/* ====================== */
+
+.usuario {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: 30px;
+
+    padding: 8px 12px;
+    border-radius: 10px;
+
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ICONO DEL USUARIO */
+
+.usuario > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background-color: #a1c247;
+    color: white;
+
+    font-size: 17px;
+}
+
+
+/* INFORMACIÓN DEL USUARIO */
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.usuario-info strong {
+    color: rgb(8, 99, 23);
+    font-size: 14px;
+}
+
+.usuario-info span {
+    color: #666;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* ==================== */
+/* Titulos Categorias */
+/* ==================== */
+
+.categoria{
+    margin: 15px auto;
+    margin-top: 100px;
+    width: 1200px;
+}
+
+.categoria h2{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.categoria h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: #d4f0be;
+    margin-top: 5px;
+}
+
+
+/* =================== */
+/* tarjetas de resumen */
+/* =================== */
+
+
+.resumen-tarjetas{
+    display: flex;
+    background-color: #cbdfbc21;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 10px;
+    margin: 100px auto;
+    margin-top: 0;
+    gap: 20px;
+}
+
+.tarjeta-resumen{
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    gap: 15px;  
+    background-color: #d7eec6bf;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 10px ;
+    width: 200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+.tarjeta-resumen:hover{
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* Tarteta de producto */
+.icono-tarjeta-producto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #bde499;
+}
+
+.icono-tarjeta-producto i {
+    font-size: 30px;
+    color: rgb(25, 112, 17);
+}
+
+.info-producto strong{
+    font-size: 20px;
+     margin-bottom: 0;
+    margin-right: 55px;
+    color: rgb(25, 112, 17);
+    
+}
+
+.info-producto{
+    padding: 10px 5px;
+    margin-bottom: -12;
+}
+
+
+/* Tarteta de Stock disponible  */
+.icono-tarjeta-disponible{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #6383c93a;
+}
+
+.icono-tarjeta-disponible i {
+    font-size: 30px;
+    color: #0e44b9;
+    
+}
+
+.info-disponible strong{
+    font-size: 20px;
+     margin-bottom: 0;
+    margin-right: 55px;
+    color: #0e44b9;
+}
+
+.info-disponible{
+    padding: 10px 5px;
+    margin-bottom: -12;
+}
+
+/* Tarteta de Stock bajo  */
+.icono-tarjeta-bajo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffc66a57;
+}
+
+.icono-tarjeta-bajo i {
+    font-size: 30px;
+    color: #F9A825;
+}
+
+.info-bajo strong{
+    font-size: 20px;
+     margin-bottom: 0;
+    margin-right: 55px;
+    color: #F9A825;
+}
+
+.info-bajo{
+    padding: 10px 5px;
+    margin-bottom: -12;
+}
+
+/* Tarteta de agotados  */
+.icono-tarjeta-agotado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffc0c070;
+}
+
+.icono-tarjeta-agotado i {
+    font-size: 30px;
+    color: #E53935;
+}
+
+
+ .contenido-tarjeta {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
+
+}
+
+.info-agotado strong{
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-right: 55px;
+    color: #E53935;
+}
+
+.info-agotado{
+    padding: 10px 5px;
+    margin-bottom: -12;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

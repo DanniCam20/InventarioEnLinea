@@ -129,13 +129,13 @@ body{
 /* =================== */
 
 .opciones{
+    display: flex;
     background-color: #cbdfbc21;
     border-radius: 20px;
     justify-content: center;
     padding: 10px;
     margin: 100px ;
     margin-top: 0;
-    display: flex;
     gap: 20px;
 }
 

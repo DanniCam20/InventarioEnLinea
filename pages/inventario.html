@@ -3,18 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventario</title>
+    <link rel="stylesheet" href="../css/inventario.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <title>Inventario | Dashboard </title>
 </head>
 <body>
-     <!-- HEADER -->
+    <!-- HEADER -->
     <header class="header">
-        <h1>
-            Dashboard En blanco
-        </h1>
-        <p>
-            Esta pantalla está en proceso de desarrollo,
-            poco a poco se cambiarán los elementos.
-        </p>
+
+        <!-- ICONO VOLVER  -->
+       <a href="../index.html" class="btn-volver">
+           <i class="fi fi-sr-arrow-left"></i>
+       </a>
+
+        <!-- ICONO PRINCIPAL -->
+        <i class="fi fi-sr-inventory-alt icono"></i>
+
+        
+        <!-- INFORMACION -->
+        <div class="header-text">
+            <h1>
+                Consulta el estado del inventario 
+            </h1>
+        </div>
+
+        <!-- INFORMACIÓN DEL USUARIO -->
+        <div class="usuario">
+
+            <i class="fi fi-sr-user"></i>
+
+            <div class="usuario-info">
+                <strong>Administrador</strong>
+                <span>Usuario del sistema</span>
+            </div>
+
+        </div>
+
     </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">     
+
+        <!-- RESUMEN DEL INVENTARIO    -->
+    
+        <section class="categoria">
+
+            <h2>
+                Resumen del inventario
+            </h2>
+
+            <div class="resumen-tarjetas">
+
+                <!-- PRODUCTOS -->
+                <div class="tarjeta-resumen">
+
+                    <div class="icono-tarjeta-producto">
+                        <i class="fi fi-rr-box-alt"></i>
+                    </div>
+
+                    <div class="contenido-tarjeta">
+                        <span>Productos</span>
+                        <div class="info-producto">
+                            <strong>2</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- STOCK DISPONIBLE -->
+                <div class="tarjeta-resumen">
+
+                    <div class="icono-tarjeta-disponible">
+                        <i class="fi fi-rr-box-open"></i>
+                    </div>
+
+                    <div class="contenido-tarjeta">
+                        <span >Stock disponible</span>
+                        <div class="info-disponible">
+                            <strong>3.000.000</strong>
+                        </div>
+                    </div>
+
+                </div>      
+
+
+                <!-- STOCK BAJO -->
+                <div class="tarjeta-resumen">
+
+                    <div class="icono-tarjeta-bajo">
+                        <i class="fi fi-rr-triangle-warning"></i>
+                    </div>
+
+                    <div class="contenido-tarjeta">
+                        <span>Stock bajo</span>
+                        <div class="info-bajo">
+                            <strong>2</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- AGOTADOS -->
+                <div class="tarjeta-resumen">
+
+                    <div class="icono-tarjeta-agotado">
+                        <i class="fi fi-rr-circle-xmark"></i>
+                    </div>
+
+                    <div class="contenido-tarjeta">
+                        <span>Agotados</span>
+                        <div class="info-agotado">
+                            <strong>2</strong>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- INVENTARIO                 -->
+        <!-- ========================= -->
+
+        <section class="categoria">
+
+            <div class="inventario-header">
+
+                <h2>
+                    Inventario
+                </h2>
+
+
+                <!-- BUSCADOR Y FILTRO -->
+
+                <div class="herramientas">
+
+                    <div class="buscador">
+
+                        <i class="fi fi-sr-search"></i>
+
+                        <input
+                            type="text"
+                            id="buscar-producto"
+                            placeholder="Buscar producto..."
+                        >
+
+                    </div>
+
+
+                    <select id="filtro-estado">
+
+                        <option value="todos">
+                            Todos
+                        </option>
+
+                        <option value="disponible">
+                            Disponible
+                        </option>
+
+                        <option value="bajo">
+                            Stock bajo
+                        </option>
+
+                        <option value="agotado">
+                            Agotado
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- TABLA                     -->
+            <!-- ========================= -->
+
+            <div class="tabla-container">
+
+                <table class="tabla-inventario">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Producto
+                            </th>
+
+                            <th>
+                                Stock
+                            </th>
+
+                            <th>
+                                Valor unitario
+                            </th>
+
+                            <th>
+                                Proveedor
+                            </th>
+
+                            <th>
+                                Estado
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabla-inventario">
+
+                        <!-- PRODUCTO 1 -->
+
+                        <tr>
+
+                            <td>
+                                Teclado inalámbrico
+                            </td>
+
+                            <td>
+                                25
+                            </td>
+
+                            <td>
+                                $50.000
+                            </td>
+
+                            <td>
+                                Distribuciones XYZ
+                            </td>
+
+                            <td>
+
+                                <span class="estado disponible">
+                                    Disponible
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- PRODUCTO 2 -->
+
+                        <tr>
+
+                            <td>
+                                Mouse inalámbrico
+                            </td>
+
+                            <td>
+                                5
+                            </td>
+
+                            <td>
+                                $25.000
+                            </td>
+
+                            <td>
+                                Distribuciones ABC
+                            </td>
+
+                            <td>
+
+                                <span class="estado bajo">
+                                    Stock bajo
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- PRODUCTO 3 -->
+
+                        <tr>
+
+                            <td>
+                                Monitor Dell
+                            </td>
+
+                            <td>
+                                0
+                            </td>
+
+                            <td>
+                                $800.000
+                            </td>
+
+                            <td>
+                                Celu-Fer SAS
+                            </td>
+
+                            <td>
+
+                                <span class="estado agotado">
+                                    Agotado
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="../js/invantario.js"></script>
 </body>
 </html>
