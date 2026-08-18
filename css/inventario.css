@@ -1,28 +1,41 @@
-body{
+/* ======================================================== */
+/* CONFIGURACIÓN GENERAL                                    */
+/* ======================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
     text-align: center;
-    justify-content: center;
     background-color: #cbdfbc21;
-    
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-/* ====================== */
-/* COMPONENTES DEL HEADER */
-/* ====================== */
 
-.header{
+/* ======================================================== */
+/* HEADER                                                    */
+/* ======================================================== */
+
+.header {
     display: flex;
     align-items: center;
+
+    width: 100%;
+
     background-color: #d4f0be;
-    padding: 10px;
+
+    padding: 10px 15px;
 }
 
-/* ICONO VOLVER */
+
+/* ====================== */
+/* BOTÓN VOLVER           */
+/* ====================== */
 
 .btn-volver {
-    background-color: aliceblue;
-    border-radius: 240px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,58 +46,88 @@ body{
     margin-left: 12px;
     margin-right: 20px;
 
+    background-color: aliceblue;
+
+    border-radius: 50%;
+
     text-decoration: none;
-    transition: all 0.5s ease;
+
+    flex-shrink: 0;
+
+    transition: all 0.3s ease;
 }
 
-.btn-volver:hover{
+.btn-volver:hover {
     background-color: rgba(46, 187, 69, 0.199);
-    transform: translateY(-4px) scale(1.02);
+    transform: translateY(-3px) scale(1.02);
 }
 
 .btn-volver i {
-    margin-top: 6px;
+    margin-top: 5px;
+
     font-size: 18px;
+
     color: rgb(8, 99, 23);
 }
 
+
+/* ====================== */
+/* ICONO PRINCIPAL        */
+/* ====================== */
+
 .icono {
-    margin-top: 8px;
+    margin-top: 6px;
+
     font-size: 40px;
+
     color: rgb(8, 99, 23);
+
+    flex-shrink: 0;
 }
+
+
+/* ====================== */
+/* TEXTO HEADER           */
+/* ====================== */
 
 .header-text {
     margin-left: 16px;
+
+    min-width: 0;
 }
 
 .header h1 {
     margin: 0;
+
     text-align: left;
+
     font-size: 25px;
-    line-height: 1;
+    line-height: 1.1;
 }
 
 
-/* ====================== */
-/* USUARIO                */
-/* ====================== */
+/* ======================================================== */
+/* USUARIO                                                   */
+/* ======================================================== */
 
 .usuario {
     display: flex;
     align-items: center;
 
     margin-left: auto;
-    margin-right: 30px;
+    margin-right: 20px;
 
     padding: 8px 12px;
+
     border-radius: 10px;
 
     background-color: rgba(255, 255, 255, 0.35);
+
+    flex-shrink: 0;
 }
 
 
-/* ICONO DEL USUARIO */
+/* ICONO */
 
 .usuario > i {
     display: flex;
@@ -99,298 +142,240 @@ body{
     border-radius: 50%;
 
     background-color: #a1c247;
+
     color: white;
 
     font-size: 17px;
 }
 
 
-/* INFORMACIÓN DEL USUARIO */
+/* INFORMACIÓN */
 
 .usuario-info {
     display: flex;
     flex-direction: column;
+
     text-align: left;
 }
 
 .usuario-info strong {
     color: rgb(8, 99, 23);
+
     font-size: 14px;
 }
 
 .usuario-info span {
-    color: #666;
-    font-size: 11px;
     margin-top: 2px;
-}
 
-/* ==================== */
-/* Titulos Categorias */
-/* ==================== */
+    color: #666;
 
-.categoria{
-    margin: 15px auto;
-    margin-top: 100px;
-    width: 1200px;
-}
-
-.categoria h2{
-    text-align: left;
-    margin-left: 10px;
-}
-
-.categoria h2::after {
-    content: "";
-    display: block;
-    width: 55px;
-    height: 3px;
-    background-color: #d4f0be;
-    margin-top: 5px;
+    font-size: 11px;
 }
 
 
-/* =================== */
-/* tarjetas de resumen */
-/* =================== */
+/* ======================================================== */
+/* TARJETAS DE RESUMEN                                      */
+/* ======================================================== */
 
-
-.resumen-tarjetas{
+.resumen-tarjetas {
     display: flex;
-    background-color: #cbdfbc21;
-    border-radius: 20px;
     justify-content: center;
+
+    width: calc(100% - 100px);
+
+    margin: 50px auto 20px;
+
     padding: 10px;
-    margin: 100px;
-    margin-top: 0;
-    margin-bottom: 20px;
+
     gap: 20px;
+
+    border-radius: 20px;
+
+    background-color: #cbdfbc21;
 }
 
-.tarjeta-resumen{
+
+.tarjeta-resumen {
     display: grid;
-    grid-template-columns: auto 1fr; 
-    gap: 15px;  
+
+    grid-template-columns: auto 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 230px;
+
+    padding: 30px;
+
     background-color: #d7eec6bf;
+
     border-radius: 10px;
-    padding: 40px;
-    margin: 10px ;
-    width: 200px;
+
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.5s ease;
+
+    transition: all 0.3s ease;
 }
 
-.tarjeta-resumen:hover{
+.tarjeta-resumen:hover {
     transform: translateY(-4px) scale(1.02);
 }
 
-/* Tarteta de producto */
-.icono-tarjeta-producto{
+
+/* ======================================================== */
+/* ICONOS DE TARJETAS                                       */
+/* ======================================================== */
+
+.icono-tarjeta-producto,
+.icono-tarjeta-disponible,
+.icono-tarjeta-bajo,
+.icono-tarjeta-agotado {
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 45px;
     height: 45px;
+
     padding: 10px;
+
     border-radius: 10px;
-    background-color: #bde499;
-}
 
-.icono-tarjeta-producto i {
-    font-size: 30px;
-    color: rgb(25, 112, 17);
-}
-
-.info-producto strong{
-    font-size: 25px;
-     margin-bottom: 0;
-    /* margin-right: 55px; */
-    color: rgb(25, 112, 17);
-    
-}
-
-.info-producto{
-    padding: 10px 5px;
-    margin-bottom: -12;
+    background-color: #e8f5dc;
 }
 
 
-/* Tarteta de Stock disponible  */
-.icono-tarjeta-disponible{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #6383c93a;
-}
-
-.icono-tarjeta-disponible i {
-    font-size: 30px;
-    color: #0e44b9;
-    
-}
-
-.info-disponible strong{
-    font-size: 25px;
-     margin-bottom: 0;
-    /* margin-right: 55px; */
-    color: #0e44b9;
-}
-
-.info-disponible{
-    padding: 10px 5px;
-    margin-bottom: -12;
-}
-
-/* Tarteta de Stock bajo  */
-.icono-tarjeta-bajo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #ffc66a57;
-}
-
-.icono-tarjeta-bajo i {
-    font-size: 30px;
-    color: #F9A825;
-}
-
-.info-bajo strong{
-    font-size: 25px;
-     margin-bottom: 0;
-    /* margin-right: 55px; */
-    color: #F9A825;
-}
-
-.info-bajo{
-    padding: 10px 5px;
-    margin-bottom: -12;
-}
-
-/* Tarteta de agotados  */
-.icono-tarjeta-agotado{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #ffc0c070;
-}
-
+.icono-tarjeta-producto i,
+.icono-tarjeta-disponible i,
+.icono-tarjeta-bajo i,
 .icono-tarjeta-agotado i {
     font-size: 30px;
+}
+
+
+/* COLORES */
+
+.icono-tarjeta-producto i,
+.info-producto strong {
+    color: rgb(25, 112, 17);
+}
+
+.icono-tarjeta-disponible i,
+.info-disponible strong {
+    color: #0e44b9;
+}
+
+.icono-tarjeta-bajo i,
+.info-bajo strong {
+    color: #F9A825;
+}
+
+.icono-tarjeta-agotado i,
+.info-agotado strong {
     color: #E53935;
 }
 
-.info-agotado strong{
-    font-size: 25px;
-    margin-bottom: 0;
-    /* margin-right: 55px; */
-    color: #E53935;
-}
 
-.info-agotado{
-    padding: 10px 5px;
-    margin-bottom: -12;
-}
+/* ======================================================== */
+/* INFORMACIÓN TARJETAS                                     */
+/* ======================================================== */
 
-
-/* Informacion de valores  */
 .contenido-tarjeta {
-    margin-right: 30px;
     display: flex;
-    width: 150px;
     flex-direction: column;
+
+    width: 150px;
+
     text-align: left;
 }
 
-.contenido-tarjeta span{
+.contenido-tarjeta span {
     color: #00000088;
+
+    font-size: 14px;
 }
 
 
+/* VALORES */
 
+.info-producto,
+.info-disponible,
+.info-bajo,
+.info-agotado {
+    padding: 5px 0;
 
-/* ====================== */
-/* TABLA                  */
-/* ====================== */
+    margin: 0;
+}
 
-.cont-tabla {
-    margin: 20px auto;
-    width: 165vh;
-    height: 550px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #d4f0be60;
-    overflow-y: auto;
+.info-producto strong,
+.info-disponible strong,
+.info-bajo strong,
+.info-agotado strong {
+    font-size: 25px;
 }
 
 
-/* BÚSQUEDA */
+/* ======================================================== */
+/* BÚSQUEDA                                                 */
+/* ======================================================== */
 
 .busqueda {
     display: flex;
     justify-content: center;
-    width: 100%;
 
+    width: 100%;
 }
+
 
 .herramientas {
     display: flex;
     align-items: center;
-    justify-content: center;
 
-    /* gap: 15px; */
-    width: 165vh;
+    width: min(1200px, calc(100% - 40px));
 
-    width: 1200px;
     padding: 10px;
 
-
+    gap: 15px;
 }
 
 
-/* ====================== */
-/* BUSCADOR               */
-/* ====================== */
+/* ======================================================== */
+/* BUSCADOR                                                  */
+/* ======================================================== */
 
 .buscador {
+    position: relative;
+
     display: flex;
     align-items: center;
 
-    position: relative;
+    flex: 1;
 
-    /* width: 750px; */
-      flex: 1;
+    min-width: 0;
 }
+
 
 .buscador i {
     position: absolute;
+
     left: 14px;
 
-    font-size: 16px;
     color: #086317;
+
+    font-size: 16px;
 
     pointer-events: none;
 }
 
-.buscador input {
-    box-sizing: border-box;
 
-    width: 97%;
+.buscador input {
+    width: 100%;
     height: 42px;
 
     padding: 10px 15px 10px 40px;
 
     border: 1px solid #c5d9b8;
+
     border-radius: 9px;
 
     background-color: white;
@@ -402,19 +387,25 @@ body{
     transition: all 0.3s ease;
 }
 
-.buscador input:hover {
+
+.buscador input:hover,
+.buscador input:focus {
     border-color: #a1c247;
 }
 
-.selector {
-    box-sizing: border-box;
 
+/* ======================================================== */
+/* SELECTOR                                                  */
+/* ======================================================== */
+
+.selector {
     width: 160px;
     height: 42px;
 
     padding: 0 12px;
 
     border: 1px solid #c5d9b8;
+
     border-radius: 9px;
 
     background-color: white;
@@ -425,42 +416,83 @@ body{
     font-weight: 500;
 
     outline: none;
+
     cursor: pointer;
 
     transition: all 0.3s ease;
+
+    flex-shrink: 0;
 }
 
-.selector:hover {
+
+.selector:hover,
+.selector:focus {
     border-color: #a1c247;
+
     background-color: #f7fbf4;
 }
 
 
+/* ======================================================== */
+/* CONTENEDOR TABLA                                         */
+/* ======================================================== */
+
+.cont-tabla {
+    width: min(1200px, calc(100% - 40px));
+
+    height: 550px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background-color: #d4f0be60;
+
+    overflow-x: auto;
+    overflow-y: auto;
+
+    text-align: left;
+}
 
 
+.cont-tabla h2 {
+    margin: 0 0 25px;
+
+    color: rgb(8, 99, 23);
+
+    font-size: 20px;
+}
 
 
-
-
-/* TABLA */
+/* ======================================================== */
+/* TABLA                                                     */
+/* ======================================================== */
 
 .table {
     width: 100%;
+
     border-collapse: separate;
+
     border-spacing: 0 10px;
 }
 
 
+/* ====================== */
 /* ENCABEZADOS            */
+/* ====================== */
 
 .encabezados th {
+    padding: 12px;
+
     background-color: #d4f0be;
 
     color: rgb(8, 99, 23);
 
-    padding: 12px;
-
     white-space: nowrap;
+
+    text-align: center;
 }
 
 .encabezados th:first-child {
@@ -472,7 +504,9 @@ body{
 }
 
 
+/* ====================== */
 /* FILAS                  */
+/* ====================== */
 
 .filas td {
     padding: 15px 10px;
@@ -482,438 +516,96 @@ body{
     border-bottom: 1px solid #ccc;
 
     white-space: nowrap;
+
+    text-align: center;
 }
 
 .filas:hover td {
     background-color: #d4f0be4d;
 }
 
-.btn-ver {
-    background-color: #6383c93a;
 
-    
+/* ======================================================== */
+/* ESTADOS                                                   */
+/* ======================================================== */
 
-
-    border: none;
+.estado-disponible,
+.estado.bajo,
+.estado.agotado {
+    display: inline-block;
 
     padding: 5px 10px;
 
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.estado-disponible {
+    background-color: #d9f2dc;
+
+    color: #197017;
+}
+
+.estado.bajo {
+    background-color: #fff0c2;
+
+    color: #b87900;
+}
+
+.estado.agotado {
+    background-color: #ffdada;
+
+    color: #d32f2f;
+}
+
+
+/* ======================================================== */
+/* BOTÓN VER                                                 */
+/* ======================================================== */
+
+.btn-ver {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 30px;
+
+    padding: 5px;
+
+    border: none;
+
     border-radius: 6px;
 
+    background-color: #6383c93a;
+
+    color: #086317;
+
     cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.btn-ver:hover {
+    background-color: #6383c960;
+
+    transform: scale(1.05);
 }
 
 .btn-ver:active {
     background-color: #4e4c4c;
 }
 
-
-
-
-/* ======================================================== */
-/* VISTA CELULAR                                             */
-/* ======================================================== */
-
-@media (max-width: 700px) {
-
-    /* ====================== */
-    /* BODY                   */
-    /* ====================== */
-
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-
-    /* ====================== */
-    /* HEADER                 */
-    /* ====================== */
-
-    .header {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 10px;
-    }
-
-
-    /* BOTÓN VOLVER */
-
-    .btn-volver {
-        width: 24px;
-        height: 24px;
-
-        margin-left: 0;
-        margin-right: 8px;
-
-        flex-shrink: 0;
-    }
-
-    .btn-volver i {
-        margin-top: 4px;
-        font-size: 16px;
-    }
-
-
-    /* ICONO PRINCIPAL */
-
-    .icono {
-        margin-top: 5px;
-        font-size: 30px;
-
-        flex-shrink: 0;
-    }
-
-
-    /* TEXTO DEL HEADER */
-
-    .header-text {
-        margin-left: 8px;
-
-        min-width: 0;
-    }
-
-    .header h1 {
-        font-size: 16px;
-        line-height: 1.1;
-
-        white-space: nowrap;
-    }
-
-
-    /* ====================== */
-    /* USUARIO                */
-    /* ====================== */
-
-    .usuario {
-        margin-left: auto;
-        margin-right: 0;
-
-        padding: 5px;
-
-        flex-shrink: 0;
-    }
-
-    .usuario > i {
-        width: 30px;
-        height: 30px;
-
-        margin-right: 0;
-
-        font-size: 14px;
-    }
-
-    /* Ocultar texto */
-
-    .usuario-info {
-        display: none;
-    }
-
-
-    /* ====================== */
-    /* TITULO CATEGORIA       */
-    /* ====================== */
-
-    .categoria {
-        width: calc(100% - 30px);
-
-        margin: 50px auto 20px;
-    }
-
-    .categoria h2 {
-        margin-left: 5px;
-
-        font-size: 20px;
-    }
-
-
-    /* ====================== */
-    /* TARJETAS DE RESUMEN    */
-    /* ====================== */
-
-    .resumen-tarjetas {
-
-        width: calc(100% - 30px);
-
-        box-sizing: border-box;
-
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 12px;
-
-        padding: 5px;
-
-        margin: 0 auto 30px;
-
-        background-color: transparent;
-    }
-
-
-    /* TARJETA */
-
-    .tarjeta-resumen {
-
-        box-sizing: border-box;
-
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        justify-items: center;
-
-        gap: 8px;
-
-        width: 100%;
-
-        min-width: 0;
-
-        margin: 0;
-
-        padding: 10px 10px;
-
-        border-radius: 10px;
-    }
-
-
-    /* ICONOS */
-
-    .icono-tarjeta-producto,
-    .icono-tarjeta-disponible,
-    .icono-tarjeta-bajo,
-    .icono-tarjeta-agotado {
-
-        width: 38px;
-        height: 38px;
-
-        padding: 8px;
-    }
-
-
-    .icono-tarjeta-producto i,
-    .icono-tarjeta-disponible i,
-    .icono-tarjeta-bajo i,
-    .icono-tarjeta-agotado i {
-
-        font-size: 24px;
-    }
-
-
-    /* INFORMACIÓN */
-
-    .info-producto strong,
-    .info-disponible strong,
-    .info-bajo strong,
-    .info-agotado strong {
-
-        font-size: 21px;
-    }
-
-
-    .info-producto,
-    .info-disponible,
-    .info-bajo,
-    .info-agotado {
-
-        padding: 0;
-
-        margin: 0;
-    }
-
-
-    /* TEXTO DE LAS TARJETAS */
-
-    .contenido-tarjeta {
-
-        width: 100%;
-
-        margin: 0;
-
-        text-align: center;
-    }
-
-    .contenido-tarjeta span {
-        font-size: 11px;
-    }
-
-
-    /* ====================== */
-    /* CONTENEDOR TABLA       */
-    /* ====================== */
-
-    .cont-tabla {
-
-        width: calc(100% - 20px);
-
-        box-sizing: border-box;
-
-        height: 500px;
-
-        margin: 20px auto;
-
-        padding: 10px;
-
-        border-radius: 10px;
-
-        /*
-         * El scroll horizontal queda
-         * solamente dentro de la tabla.
-         */
-
-        overflow-x: auto;
-        overflow-y: auto;
-    }
-
-
-    /* ====================== */
-    /* HERRAMIENTAS           */
-    /* ====================== */
-
-    .busqueda {
-        width: 100%;
-    }
-
-    .herramientas {
-
-        width: 90%;
-
-        box-sizing: border-box;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 10px;
-
-        padding: 5px;
-    }
-
-    /* ====================== */
-    /* BUSCADOR               */
-    /* ====================== */
-
-    .buscador {
-
-        width: 100%;
-
-        flex: none;
-    }
-
-
-    .buscador input {
-
-        width: 100%;
-
-        height: 40px;
-
-        box-sizing: border-box;
-
-        font-size: 13px;
-    }
-
-
-    .buscador i {
-        left: 12px;
-
-        font-size: 14px;
-    }
-
-
-    /* ====================== */
-    /* SELECTOR               */
-    /* ====================== */
-
-    .selector {
-
-        width: 100%;
-
-        height: 40px;
-
-        font-size: 13px;
-    }
-
-
-    /* ====================== */
-    /* TABLA                  */
-    /* ====================== */
-
-    .table {
-
-        /*
-         * La tabla conserva un tamaño
-         * suficiente para sus columnas.
-         */
-
-        width: 900px;
-
-        min-width: 900px;
-
-        table-layout: auto;
-
-        border-collapse: separate;
-
-        border-spacing: 0 8px;
-    }
-
-
-    /* ====================== */
-    /* ENCABEZADOS            */
-    /* ====================== */
-
-    .encabezados th {
-
-        padding: 11px 10px;
-
-        font-size: 12px;
-
-        white-space: nowrap;
-    }
-
-
-    .encabezados th:first-child {
-        border-radius: 8px 0 0 8px;
-    }
-
-    .encabezados th:last-child {
-        border-radius: 0 8px 8px 0;
-    }
-
-
-    /* ====================== */
-    /* FILAS                  */
-    /* ====================== */
-
-    .filas td {
-
-        padding: 12px 10px;
-
-        font-size: 12px;
-
-        white-space: nowrap;
-
-        text-align: center;
-    }
-
-
-    /* ====================== */
-    /* BOTÓN VER              */
-    /* ====================== */
-
-    .btn-ver {
-
-        padding: 5px 8px;
-
-        font-size: 12px;
-    }
-
+.btn-ver i {
+    font-size: 14px;
 }
 
 
 /* ======================================================== */
-/* VISTA TABLET                                            */
+/* TABLET                                                    */
+/* 701px - 1100px                                           */
 /* ======================================================== */
 
 @media (min-width: 701px) and (max-width: 1100px) {
@@ -927,15 +619,8 @@ body{
     }
 
     .btn-volver {
-        width: 25px;
-        height: 25px;
-
         margin-left: 5px;
         margin-right: 12px;
-    }
-
-    .btn-volver i {
-        font-size: 17px;
     }
 
     .icono {
@@ -956,8 +641,9 @@ body{
     /* ====================== */
 
     .usuario {
-        margin-right: 10px;
-        padding: 6px 10px;
+        margin-right: 5px;
+
+        padding: 6px 8px;
     }
 
     .usuario > i {
@@ -979,33 +665,13 @@ body{
 
 
     /* ====================== */
-    /* TÍTULO CATEGORÍA       */
-    /* ====================== */
-
-    .categoria {
-        width: calc(100% - 40px);
-
-        margin: 60px auto 20px;
-    }
-
-    .categoria h2 {
-        margin-left: 0;
-        font-size: 22px;
-    }
-
-
-    /* ====================== */
-    /* TARJETAS DE RESUMEN    */
+    /* TARJETAS               */
     /* ====================== */
 
     .resumen-tarjetas {
         width: calc(100% - 40px);
 
-        box-sizing: border-box;
-
-        margin: 20px auto;
-
-        padding: 10px;
+        margin: 35px auto 20px;
 
         gap: 12px;
 
@@ -1013,72 +679,236 @@ body{
     }
 
     .tarjeta-resumen {
-        box-sizing: border-box;
-
-        width: calc(50% - 10px);
-
-        margin: 5px;
+        width: calc(50% - 6px);
 
         padding: 25px;
+
+        margin: 0;
+    }
+
+    .contenido-tarjeta {
+        width: auto;
+    }
+
+
+    /* ====================== */
+    /* BÚSQUEDA               */
+    /* ====================== */
+
+    .herramientas {
+        width: calc(100% - 40px);
+
+        gap: 10px;
+    }
+
+    .selector {
+        width: 150px;
+    }
+
+
+    /* ====================== */
+    /* TABLA                  */
+    /* ====================== */
+
+    .cont-tabla {
+        width: calc(100% - 40px);
+
+        height: 500px;
+
+        margin: 20px auto;
+
+        padding: 15px;
+    }
+
+    .table {
+        min-width: 800px;
+    }
+
+    .encabezados th {
+        padding: 11px 8px;
+
+        font-size: 13px;
+    }
+
+    .filas td {
+        padding: 13px 8px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* ======================================================== */
+/* CELULAR                                                   */
+/* Hasta 700px                                               */
+/* ======================================================== */
+
+@media (max-width: 700px) {
+
+    /* ====================== */
+    /* HEADER                 */
+    /* ====================== */
+
+    .header {
+        padding: 9px 10px;
+    }
+
+    .btn-volver {
+        width: 24px;
+        height: 24px;
+
+        margin-left: 0;
+        margin-right: 8px;
+    }
+
+    .btn-volver i {
+        margin-top: 4px;
+
+        font-size: 16px;
+    }
+
+    .icono {
+        margin-top: 4px;
+
+        font-size: 30px;
+    }
+
+    .header-text {
+        margin-left: 8px;
+
+        flex: 1;
+
+        min-width: 0;
+    }
+
+    .header h1 {
+        font-size: 15px;
+
+        line-height: 1.1;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* ====================== */
+    /* USUARIO                */
+    /* ====================== */
+
+    .usuario {
+        margin-left: 5px;
+        margin-right: 0;
+
+        padding: 4px;
+
+        background-color: transparent;
+    }
+
+    .usuario > i {
+        width: 30px;
+        height: 30px;
+
+        margin-right: 0;
+
+        font-size: 14px;
+    }
+
+    .usuario-info {
+        display: none;
+    }
+
+
+    /* ====================== */
+    /* TARJETAS               */
+    /* ====================== */
+
+    .resumen-tarjetas {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        width: calc(100% - 30px);
+
+        margin: 30px auto 20px;
+
+        padding: 0;
+
+        gap: 12px;
+
+        background-color: transparent;
+    }
+
+    .tarjeta-resumen {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+
+        min-width: 0;
+
+        margin: 0;
+
+        padding: 15px 8px;
+
+        gap: 6px;
     }
 
     .icono-tarjeta-producto,
     .icono-tarjeta-disponible,
     .icono-tarjeta-bajo,
     .icono-tarjeta-agotado {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
 
-        padding: 8px;
+        padding: 7px;
     }
 
     .icono-tarjeta-producto i,
     .icono-tarjeta-disponible i,
     .icono-tarjeta-bajo i,
     .icono-tarjeta-agotado i {
-        font-size: 26px;
+        font-size: 23px;
     }
 
-
-    /* ====================== */
-    /* INFORMACIÓN TARJETAS   */
-    /* ====================== */
-
     .contenido-tarjeta {
-        width: auto;
-        margin-right: 0;
+        display: flex;
+
+        align-items: center;
+
+        width: 100%;
+
+        margin: 0;
+
+        text-align: center;
+    }
+
+    .contenido-tarjeta span {
+        font-size: 11px;
+    }
+
+    .info-producto,
+    .info-disponible,
+    .info-bajo,
+    .info-agotado {
+        padding: 2px 0;
     }
 
     .info-producto strong,
     .info-disponible strong,
     .info-bajo strong,
     .info-agotado strong {
-        font-size: 22px;
+        font-size: 21px;
     }
 
 
     /* ====================== */
-    /* CONTENEDOR TABLA       */
-    /* ====================== */
-
-    .cont-tabla {
-        box-sizing: border-box;
-
-        width: calc(100% - 40px);
-
-        height: 500px;
-
-        margin: 30px auto;
-
-        padding: 15px;
-
-        overflow-x: auto;
-        overflow-y: auto;
-    }
-
-
-    /* ====================== */
-    /* HERRAMIENTAS           */
+    /* BÚSQUEDA               */
     /* ====================== */
 
     .busqueda {
@@ -1086,23 +916,21 @@ body{
     }
 
     .herramientas {
-        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
 
-        width: 100%;
+        width: calc(100% - 30px);
 
-        padding: 10px;
+        padding: 5px;
 
         gap: 10px;
     }
 
-
-    /* ====================== */
-    /* BUSCADOR               */
-    /* ====================== */
-
     .buscador {
-        flex: 1;
-        min-width: 0;
+        width: 100%;
+
+        flex: none;
     }
 
     .buscador input {
@@ -1113,13 +941,14 @@ body{
         font-size: 13px;
     }
 
+    .buscador i {
+        left: 12px;
 
-    /* ====================== */
-    /* SELECTOR               */
-    /* ====================== */
+        font-size: 14px;
+    }
 
     .selector {
-        width: 150px;
+        width: 100%;
 
         height: 40px;
 
@@ -1128,58 +957,136 @@ body{
 
 
     /* ====================== */
+    /* CONTENEDOR TABLA       */
+    /* ====================== */
+
+    .cont-tabla {
+        width: calc(100% - 20px);
+
+        height: 500px;
+
+        margin: 20px auto;
+
+        padding: 10px;
+
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    .cont-tabla h2 {
+        margin-bottom: 15px;
+
+        font-size: 18px;
+    }
+
+
+    /* ====================== */
     /* TABLA                  */
     /* ====================== */
 
     .table {
-        width: 100%;
+        width: max-content;
 
-        min-width: 700px;
+        min-width: 800px;
 
         border-collapse: separate;
 
         border-spacing: 0 8px;
     }
 
-
-    /* ====================== */
-    /* ENCABEZADOS            */
-    /* ====================== */
-
     .encabezados th {
-        padding: 11px 8px;
-
-        font-size: 13px;
-
-        white-space: nowrap;
-    }
-
-
-    /* ====================== */
-    /* FILAS                  */
-    /* ====================== */
-
-    .filas td {
-        padding: 13px 8px;
-
-        font-size: 13px;
-
-        white-space: nowrap;
-    }
-
-
-    /* ====================== */
-    /* BOTÓN VER              */
-    /* ====================== */
-
-    .btn-ver {
-        padding: 5px 9px;
+        padding: 10px;
 
         font-size: 12px;
     }
 
+    .filas td {
+        padding: 11px 10px;
+
+        font-size: 12px;
+    }
+
+
+    /* ====================== */
+    /* ESTADOS                */
+    /* ====================== */
+
+    .estado-disponible,
+    .estado.bajo,
+    .estado.agotado {
+        padding: 4px 8px;
+
+        font-size: 11px;
+    }
+
+
+    /* ====================== */
+    /* BOTÓN                  */
+    /* ====================== */
+
+    .btn-ver {
+        width: 30px;
+        height: 28px;
+
+        padding: 4px;
+    }
+
+    .btn-ver i {
+        font-size: 13px;
+    }
 }
 
 
+/* ======================================================== */
+/* CELULARES MUY PEQUEÑOS                                    */
+/* Hasta 400px                                               */
+/* ======================================================== */
 
+@media (max-width: 400px) {
 
+    .header h1 {
+        font-size: 13px;
+    }
+
+    .icono {
+        font-size: 27px;
+    }
+
+    .usuario > i {
+        width: 28px;
+        height: 28px;
+
+        font-size: 13px;
+    }
+
+    .resumen-tarjetas {
+        width: calc(100% - 20px);
+
+        gap: 8px;
+    }
+
+    .tarjeta-resumen {
+        padding: 12px 5px;
+    }
+
+    .contenido-tarjeta span {
+        font-size: 10px;
+    }
+
+    .info-producto strong,
+    .info-disponible strong,
+    .info-bajo strong,
+    .info-agotado strong {
+        font-size: 19px;
+    }
+
+    .herramientas {
+        width: calc(100% - 20px);
+    }
+
+    .cont-tabla {
+        width: calc(100% - 10px);
+
+        padding: 8px;
+    }
+}

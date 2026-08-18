@@ -1,0 +1,924 @@
+body {
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ========================= */
+/* HEADER                    */
+/* ========================= */
+
+.header {
+    display: flex;
+    align-items: center;
+
+    background-color: #d4f0be;
+
+    padding: 10px;
+}
+
+
+/* BOTÓN VOLVER */
+
+.btn-volver {
+    background-color: aliceblue;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    margin-left: 12px;
+    margin-right: 20px;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: rgba(46, 187, 69, 0.20);
+
+    transform: translateY(-3px) scale(1.02);
+}
+
+.btn-volver i {
+    font-size: 18px;
+    color: rgb(8, 99, 23);
+}
+
+
+/* ICONO PRINCIPAL */
+
+.icono {
+    margin-top: 8px;
+
+    font-size: 40px;
+
+    color: rgb(8, 99, 23);
+}
+
+
+/* TEXTO HEADER */
+
+.header-text {
+    margin-left: 16px;
+}
+
+.header h1 {
+    margin: 0;
+
+    text-align: left;
+
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+/* ========================= */
+/* USUARIO                   */
+/* ========================= */
+
+.usuario {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: 30px;
+
+    padding: 8px 12px;
+
+    border-radius: 10px;
+
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ICONO USUARIO */
+
+.usuario > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background-color: #a1c247;
+
+    color: white;
+
+    font-size: 17px;
+}
+
+
+/* INFORMACIÓN */
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+}
+
+.usuario-info strong {
+    color: rgb(8, 99, 23);
+
+    font-size: 14px;
+}
+
+.usuario-info span {
+    color: #666;
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+
+/* ========================= */
+/* RESUMEN DE VENTAS         */
+/* ========================= */
+
+.resumen-ventas {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    width: 1100px;
+
+    margin: 60px auto 40px;
+}
+
+
+/* TARJETA */
+
+.tarjeta-resumen {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background-color: #d7eec6bf;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+.tarjeta-resumen:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ICONO TARJETA */
+
+.icono-tarjeta {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    margin-right: 15px;
+
+    border-radius: 10px;
+
+    background-color: #e8f5dc;
+
+    color: rgb(8, 99, 23);
+}
+
+.icono-tarjeta i {
+    font-size: 22px;
+}
+
+
+/* CONTENIDO */
+
+.contenido-tarjeta {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+}
+
+.contenido-tarjeta span {
+
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.contenido-tarjeta strong {
+
+    color: rgb(8, 99, 23);
+
+    font-size: 24px;
+}
+
+
+/* ========================= */
+/* CONTENEDOR REGISTRAR      */
+/* ========================= */
+
+.cont-venta {
+
+    width: 700px;
+
+    margin: 50px auto;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background-color: #d4f0be60;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    text-align: left;
+}
+
+
+/* TITULO */
+
+.cont-venta h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 25px;
+
+    color: rgb(8, 99, 23);
+
+    font-size: 20px;
+}
+
+
+/* ========================= */
+/* FORMULARIO                */
+/* ========================= */
+
+.formulario-venta {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* CAMPO */
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.campo label {
+
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* INPUTS Y SELECT */
+
+.input-venta {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    background-color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: border-color 0.2s;
+}
+
+.input-venta:focus {
+
+    border-color: #a1c247;
+}
+
+
+/* PRECIO Y SUBTOTAL */
+
+.precio,
+.subtotal {
+
+    padding: 10px;
+
+    background-color: white;
+
+    border-radius: 6px;
+
+    color: rgb(8, 99, 23);
+
+    font-weight: bold;
+}
+
+
+/* ========================= */
+/* BOTÓN AGREGAR             */
+/* ========================= */
+
+.btn-agregar {
+
+    grid-column: 1 / -1;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #a1c247;
+
+    color: rgb(8, 99, 23);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-agregar:hover {
+
+    background-color: #91b33d;
+
+    transform: translateY(-2px);
+}
+
+.btn-agregar i {
+
+    margin-right: 6px;
+}
+
+
+/* ========================= */
+/* PRODUCTOS DE LA VENTA     */
+/* ========================= */
+
+.cont-productos-venta {
+
+    width: 1100px;
+
+    margin: 50px auto;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    background-color: #d4f0be60;
+
+    text-align: left;
+}
+
+
+/* TITULO */
+
+.cont-productos-venta h2 {
+
+    margin-top: 0;
+
+    color: rgb(8, 99, 23);
+
+    font-size: 20px;
+}
+
+
+/* ========================= */
+/* TABLA                     */
+/* ========================= */
+
+.tabla-venta {
+
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0 8px;
+}
+
+
+/* ENCABEZADOS */
+.encabezados th {
+    background-color: #d4f0be;
+
+    color: rgb(8, 99, 23);
+
+    padding: 12px;
+
+    white-space: nowrap;
+}
+
+.encabezados th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.encabezados th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* ====================== */
+/* FILAS                  */
+/* ====================== */
+
+.filas td {
+    padding: 15px 10px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #ccc;
+
+    white-space: nowrap;
+}
+
+.filas:hover td {
+    background-color: #d4f0be4d;
+}
+
+
+
+/* ========================= */
+/* BOTÓN ELIMINAR            */
+/* ========================= */
+
+.btn-eliminar {
+
+    border: none;
+
+    background-color: #ffe5e5;
+
+    color: #d93636;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-eliminar:hover {
+
+    background-color: #ffd1d1;
+
+    transform: scale(1.05);
+}
+
+
+/* ========================= */
+/* TOTAL                     */
+/* ========================= */
+
+.total-venta {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-top: 2px solid #d4f0be;
+
+    color: #555;
+}
+
+.total-venta strong {
+
+    color: rgb(8, 99, 23);
+
+    font-size: 24px;
+}
+
+
+/* ========================= */
+/* BOTÓN REGISTRAR           */
+/* ========================= */
+
+.btn-registrar {
+
+    display: block;
+
+    margin: 15px 0 0 auto;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #a1c247;
+
+    color: rgb(8, 99, 23);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-registrar:hover {
+
+    background-color: #91b33d;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================= */
+/* VENTAS RECIENTES          */
+/* ========================= */
+
+.ventas-recientes {
+
+    width: 1100px;
+
+    margin: 60px auto;
+
+    text-align: left;
+}
+
+.ventas-recientes h2 {
+
+    margin-bottom: 20px;
+
+    color: rgb(8, 99, 23);
+
+    font-size: 20px;
+}
+
+
+/* TABLA */
+
+.tabla-ventas {
+
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0 8px;
+}
+
+
+/* ENCABEZADOS */
+
+.tabla-ventas th {
+
+    padding: 12px;
+
+    background-color: #d4f0be;
+
+    color: rgb(8, 99, 23);
+
+    font-size: 14px;
+}
+
+
+/* CELDAS */
+
+.tabla-ventas td {
+
+    padding: 13px;
+
+    background-color: white;
+
+    color: #555;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ========================= */
+/* ESTADO                    */
+/* ========================= */
+
+.estado {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.pagada {
+
+    background-color: #e2f2d7;
+
+    color: #218b35;
+}
+
+
+/* ======================================================== */
+/* VISTA CELULARES                                         */
+/* ======================================================== */
+
+@media (max-width: 600px) {
+
+
+    /* ========================= */
+    /* HEADER                    */
+    /* ========================= */
+
+    .header {
+
+        padding: 10px;
+
+    }
+
+
+    .btn-volver {
+
+        width: 25px;
+        height: 25px;
+
+        margin-left: 5px;
+        margin-right: 10px;
+
+    }
+
+
+    .btn-volver i {
+
+        font-size: 16px;
+
+    }
+
+
+    .icono {
+
+        font-size: 30px;
+
+    }
+
+
+    .header-text {
+
+        margin-left: 10px;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 16px;
+
+    }
+
+
+    /* USUARIO */
+
+    .usuario {
+
+        margin-right: 0;
+
+        padding: 5px;
+
+    }
+
+
+    .usuario > i {
+
+        width: 30px;
+        height: 30px;
+
+        margin-right: 0;
+
+        font-size: 14px;
+
+    }
+
+
+    .usuario-info {
+
+        display: none;
+
+    }
+
+
+    /* ========================= */
+    /* RESUMEN                   */
+    /* ========================= */
+
+    .resumen-ventas {
+
+        grid-template-columns: 1fr 1fr;
+
+        width: auto;
+
+        margin: 30px 15px;
+
+        gap: 12px;
+
+    }
+
+
+    .tarjeta-resumen {
+
+        padding: 15px 10px;
+
+    }
+
+
+    .icono-tarjeta {
+
+        width: 38px;
+        height: 38px;
+
+        margin-right: 8px;
+
+    }
+
+
+    .icono-tarjeta i {
+
+        font-size: 18px;
+
+    }
+
+
+    .contenido-tarjeta span {
+
+        font-size: 12px;
+
+    }
+
+
+    .contenido-tarjeta strong {
+
+        font-size: 20px;
+
+    }
+
+
+    /* ========================= */
+    /* REGISTRAR VENTA           */
+    /* ========================= */
+
+    .cont-venta {
+
+        width: auto;
+
+        margin: 30px 15px;
+
+        padding: 20px;
+
+    }
+
+
+    .formulario-venta {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .btn-agregar {
+
+        grid-column: auto;
+
+    }
+
+
+    /* ========================= */
+    /* PRODUCTOS                 */
+    /* ========================= */
+
+    .cont-productos-venta {
+
+        width: auto;
+
+        margin: 30px 15px;
+
+        padding: 15px;
+
+        overflow-x: auto;
+
+    }
+
+
+    .tabla-venta {
+
+        min-width: 650px;
+
+    }
+
+
+    /* ========================= */
+    /* TOTAL                     */
+    /* ========================= */
+
+    .total-venta {
+
+        justify-content: space-between;
+
+    }
+
+
+    .total-venta strong {
+
+        font-size: 20px;
+
+    }
+
+
+    .btn-registrar {
+
+        width: 100%;
+
+        margin-top: 15px;
+
+    }
+
+
+    /* ========================= */
+    /* VENTAS RECIENTES          */
+    /* ========================= */
+
+    .ventas-recientes {
+
+        width: auto;
+
+        margin: 40px 15px;
+
+        overflow-x: auto;
+
+    }
+
+
+    .tabla-ventas {
+
+        min-width: 700px;
+
+    }
+
+}

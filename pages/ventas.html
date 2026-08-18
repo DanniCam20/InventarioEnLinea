@@ -3,18 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventas</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="../css/ventas.css">
+    <title>Ventas | Dasboard</title>
 </head>
 <body>
-     <!-- HEADER -->
+
+    <!-- HEADER -->
     <header class="header">
-        <h1>
-            Dashboard En blanco
-        </h1>
-        <p>
-            Esta pantalla está en proceso de desarrollo,
-            poco a poco se cambiarán los elementos.
-        </p>
+
+        <!-- ICONO VOLVER  -->
+       <a href="../index.html" class="btn-volver">
+           <i class="fi fi-sr-arrow-left"></i>
+       </a>
+
+        <!-- ICONO PRINCIPAL -->
+        <i class="fi fi-sr-inventory-alt icono"></i>
+
+        
+        <!-- INFORMACION -->
+        <div class="header-text">
+            <h1>
+                Registra y consulta ventas  
+            </h1>
+        </div>
+
+        <!-- INFORMACIÓN DEL USUARIO -->
+        <div class="usuario">
+
+            <i class="fi fi-sr-user"></i>
+
+            <div class="usuario-info">
+                <strong>Administrador</strong>
+                <span>Usuario del sistema</span>
+            </div>
+
+        </div>
+
     </header>
+
+    <!-- ========================= -->
+    <!-- CONTENIDO PRINCIPAL       -->
+    <!-- ========================= -->
+
+    <main class="main">
+
+
+        <!-- ========================= -->
+        <!-- RESUMEN DE VENTAS         -->
+        <!-- ========================= -->
+
+        <div class="resumen-ventas">
+
+
+            <!-- TOTAL DE VENTAS -->
+            <div class="tarjeta-resumen">
+
+                <div class="icono-tarjeta">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </div>
+
+                <div class="contenido-tarjeta">
+                    <span>Total de ventas</span>
+                    <strong>125</strong>
+                </div>
+
+            </div>
+
+
+            <!-- INGRESOS -->
+            <div class="tarjeta-resumen">
+
+                <div class="icono-tarjeta">
+                    <i class="fi fi-rr-dollar"></i>
+                </div>
+
+                <div class="contenido-tarjeta">
+                    <span>Ingresos</span>
+                    <strong>$4.250.000</strong>
+                </div>
+
+            </div>
+
+
+            <!-- VENTAS DE HOY -->
+            <div class="tarjeta-resumen">
+
+                <div class="icono-tarjeta">
+                    <i class="fi fi-rr-calendar"></i>
+                </div>
+
+                <div class="contenido-tarjeta">
+                    <span>Ventas de hoy</span>
+                    <strong>8</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- REGISTRAR VENTA           -->
+        <!-- ========================= -->
+
+        <div class="cont-venta">
+
+            <h2>Registrar venta</h2>
+
+
+            <form class="formulario-venta">
+
+
+                <!-- CLIENTE -->
+                <div class="campo">
+                    <label for="cliente">
+                        Cliente
+                    </label>
+
+                    <select id="cliente" class="input-venta">
+
+                        <option value="">
+                            Seleccionar cliente
+                        </option>
+
+                        <option value="carlos">
+                            Carlos Pérez
+                        </option>
+
+                        <option value="ana">
+                            Ana Rodríguez
+                        </option>
+
+                        <option value="pedro">
+                            Pedro Gómez
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- PRODUCTO -->
+                <div class="campo">
+                    <label for="producto">
+                        Producto
+                    </label>
+
+                    <select id="producto" class="input-venta">
+
+                        <option value="">
+                            Seleccionar producto
+                        </option>
+
+                        <option value="mouse">
+                            Mouse inalámbrico
+                        </option>
+
+                        <option value="teclado">
+                            Teclado inalámbrico
+                        </option>
+
+                        <option value="monitor">
+                            Monitor DELL
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- CANTIDAD -->
+                <div class="campo">
+                    <label for="cantidad">
+                        Cantidad
+                    </label>
+
+                    <input
+                        type="number"
+                        id="cantidad"
+                        class="input-venta"
+                        min="1"
+                        value="1"
+                    >
+                </div>
+
+
+                <!-- PRECIO -->
+                <div class="campo">
+                    <label>
+                        Precio unitario
+                    </label>
+
+                    <span class="precio">
+                        $25.000
+                    </span>
+                </div>
+
+
+                <!-- SUBTOTAL -->
+                <div class="campo">
+                    <label>
+                        Subtotal
+                    </label>
+
+                    <span class="subtotal">
+                        $25.000
+                    </span>
+                </div>
+
+
+                <!-- BOTÓN -->
+                <button type="button" class="btn-agregar">
+                    <i class="fi fi-sr-plus"></i>
+                    Agregar producto
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- PRODUCTOS DE LA VENTA      -->
+        <!-- ========================= -->
+
+        <div class="cont-productos-venta">
+
+            <h2>
+                Productos de la venta
+            </h2>
+
+
+            <table class="tabla-venta">
+
+                <thead class="encabezados">
+
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio unitario</th>
+                        <th>Subtotal</th>
+                        <th>Acción</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="tabla-ventas">
+
+                    <tr class="filas">
+
+                        <td>
+                            Mouse inalámbrico
+                        </td>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            $25.000
+                        </td>
+
+                        <td>
+                            $50.000
+                        </td>
+
+                        <td>
+
+                            <button class="btn-eliminar">
+                                <i class="fi fi-sr-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="filas">
+
+                        <td>
+                            Teclado inalámbrico
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            $40.000
+                        </td>
+
+                        <td>
+                            $40.000
+                        </td>
+
+                        <td>
+
+                            <button class="btn-eliminar">
+                                <i class="fi fi-sr-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <!-- TOTAL -->
+
+            <div class="total-venta">
+
+                <span>
+                    Total:
+                </span>
+
+                <strong>
+                    $90.000
+                </strong>
+
+            </div>
+
+
+            <!-- REGISTRAR -->
+
+            <button type="button" class="btn-registrar">
+                <i class="fi fi-sr-check"></i>
+                Registrar venta
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- VENTAS RECIENTES          -->
+        <!-- ========================= -->
+
+        <div class="ventas-recientes">
+
+            <h2>
+                Ventas recientes
+            </h2>
+
+
+            <table class="tabla-ventas">
+
+                <thead class="encabezados">
+
+                    <tr>
+                        <th>Venta</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="tabla-recientes">
+
+                    <tr class="filas">
+
+                        <td>
+                            #00125
+                        </td>
+
+                        <td>
+                            Carlos Pérez
+                        </td>
+
+                        <td>
+                            18/08/2026
+                        </td>
+
+                        <td>
+                            $90.000
+                        </td>
+
+                        <td>
+                            <span class="estado pagada">
+                                Pagada
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="filas">
+
+                        <td>
+                            #00124
+                        </td>
+
+                        <td>
+                            Ana Rodríguez
+                        </td>
+
+                        <td>
+                            18/08/2026
+                        </td>
+
+                        <td>
+                            $45.000
+                        </td>
+
+                        <td>
+                            <span class="estado pagada">
+                                Pagada
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="filas">
+
+                        <td>
+                            #00123
+                        </td>
+
+                        <td>
+                            Pedro Gómez
+                        </td>
+
+                        <td>
+                            17/08/2026
+                        </td>
+
+                        <td>
+                            $120.000
+                        </td>
+
+                        <td>
+                            <span class="estado pagada">
+                                Pagada
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </main>
 </body>
 </html>

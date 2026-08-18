@@ -1,28 +1,40 @@
-body{
-    margin: 0;
-    text-align: center;
-    justify-content: center;
-    background-color: #cbdfbc21;
-    
+/* ======================================================== */
+/* CONFIGURACIÓN GENERAL                                    */
+/* ======================================================== */
+
+* {
+    box-sizing: border-box;
 }
 
-/* ====================== */
-/* COMPONENTES DEL HEADER */
-/* ====================== */
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #cbdfbc21;
+    overflow-x: hidden;
+}
 
-.header{
+
+/* ======================================================== */
+/* COMPONENTES DEL HEADER                                   */
+/* ======================================================== */
+
+.header {
     display: flex;
     align-items: center;
+
+    width: 100%;
+
     background-color: #d4f0be;
+
     padding: 10px;
 }
 
-/* ICONO VOLVER */
+
+/* ====================== */
+/* ICONO VOLVER           */
+/* ====================== */
 
 .btn-volver {
-    background-color: aliceblue;
-    border-radius: 240px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,43 +45,70 @@ body{
     margin-left: 12px;
     margin-right: 20px;
 
+    background-color: aliceblue;
+
+    border-radius: 50%;
+
     text-decoration: none;
-    transition: all 0.5s ease;
+
+    flex-shrink: 0;
+
+    transition: all 0.3s ease;
 }
 
-.btn-volver:hover{
+.btn-volver:hover {
     background-color: rgba(46, 187, 69, 0.199);
     transform: translateY(-4px) scale(1.02);
 }
 
 .btn-volver i {
     margin-top: 6px;
+
     font-size: 18px;
+
     color: rgb(8, 99, 23);
 }
+
+
+/* ====================== */
+/* ICONO PRINCIPAL        */
+/* ====================== */
 
 .icono {
     margin-top: 8px;
+
     font-size: 40px;
+
     color: rgb(8, 99, 23);
+
+    flex-shrink: 0;
 }
+
+
+/* ====================== */
+/* TEXTO HEADER           */
+/* ====================== */
 
 .header-text {
     margin-left: 16px;
-}
 
+    min-width: 0;
+}
 
 .header h1 {
     margin: 0;
+
     text-align: left;
+
     font-size: 25px;
-    line-height: 1;
+
+    line-height: 1.1;
 }
 
 
-/* ====================== */
-/* USUARIO                */
-/* ====================== */
+/* ======================================================== */
+/* USUARIO                                                   */
+/* ======================================================== */
 
 .usuario {
     display: flex;
@@ -79,13 +118,16 @@ body{
     margin-right: 30px;
 
     padding: 8px 12px;
+
     border-radius: 10px;
 
     background-color: rgba(255, 255, 255, 0.35);
+
+    flex-shrink: 0;
 }
 
 
-/* ICONO DEL USUARIO */
+/* ICONO */
 
 .usuario > i {
     display: flex;
@@ -100,100 +142,141 @@ body{
     border-radius: 50%;
 
     background-color: #a1c247;
+
     color: white;
 
     font-size: 17px;
 }
 
 
-/* INFORMACIÓN DEL USUARIO */
+/* INFORMACIÓN */
 
 .usuario-info {
     display: flex;
     flex-direction: column;
+
     text-align: left;
 }
 
 .usuario-info strong {
     color: rgb(8, 99, 23);
+
     font-size: 14px;
 }
 
 .usuario-info span {
-    color: #666;
-    font-size: 11px;
     margin-top: 2px;
+
+    color: #666;
+
+    font-size: 11px;
 }
 
 
-/* ============================== */
-/* FORMULARIO + TABLA             */
-/* ============================== */
+/* ======================================================== */
+/* FORMULARIO + TABLA                                       */
+/* ======================================================== */
 
 .formulario-y-tabla {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 
-    margin: 10px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    gap: 20px;
+
+    width: 100%;
+
+    margin: 40px auto;
 }
 
 
-/* ====================== */
-/* FORMULARIO             */
-/* ====================== */
+/* ======================================================== */
+/* FORMULARIO                                                */
+/* ======================================================== */
 
 .cont-formulario {
-    margin: 50px;
-    margin-top: 20px;
-
     width: 350px;
+
     height: auto;
+
+    margin: 20px 0;
 
     padding: 20px;
 
     border-radius: 10px;
 
     background-color: #d4f0be60;
+
+    flex-shrink: 0;
 }
+
 
 .formulario {
     display: flex;
     flex-direction: column;
+
     gap: 18px;
 }
+
 
 .campo {
     display: flex;
     flex-direction: column;
+
     gap: 6px;
 }
 
+
 .campo label {
     font-weight: 800;
+
     text-align: left;
 }
 
+
 .input-formulario {
+    width: 100%;
+
     padding: 10px;
 
     border: 1px solid #ccc;
+
     border-radius: 6px;
 
     font-size: 15px;
+
     outline: none;
+
+    transition: border-color 0.3s ease;
 }
 
-.btn-guardar {
-    background-color: #fefffdbf;
+.input-formulario:focus {
+    border-color: #a1c247;
+}
 
-    border-radius: 10px;
+
+/* ======================================================== */
+/* BOTÓN GUARDAR                                             */
+/* ======================================================== */
+
+.btn-guardar {
+    width: 100%;
 
     padding: 15px 20px;
+
     margin-bottom: 12px;
 
     border: none;
+
+    border-radius: 10px;
+
+    background-color: #a1c247;
+
+    color: rgb(8, 99, 23);
+
+    font-weight: bold;
+
+    cursor: pointer;
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
 
@@ -201,39 +284,45 @@ body{
 }
 
 .btn-guardar:hover {
-    background-color: #ccc;
+    background-color: #91b33d;
+
     transform: translateY(-4px) scale(1.02);
 }
 
-/* Mensaje de guardado y actualizado */
+
+/* ======================================================== */
+/* MENSAJE                                                   */
+/* ======================================================== */
 
 .mensaje {
     display: none;
 
-    
     padding: 10px;
-
-    border-radius: 8px;
 
     border: 1px solid #368a48;
 
+    border-radius: 8px;
+
     background-color: #d4f0be;
+
     color: rgb(8, 99, 23);
 
     font-size: 14px;
+
     font-weight: bold;
 }
 
 
-/* ====================== */
-/* TABLA                  */
-/* ====================== */
+/* ======================================================== */
+/* CONTENEDOR TABLA                                          */
+/* ======================================================== */
 
 .cont-tabla {
-    margin-top: 20px;
-
     width: 800px;
+
     height: 550px;
+
+    margin: 20px 0;
 
     padding: 20px;
 
@@ -241,51 +330,91 @@ body{
 
     background-color: #d4f0be60;
 
+    overflow-x: auto;
     overflow-y: auto;
+
+    flex-shrink: 1;
 }
 
 
-/* BÚSQUEDA */
+/* ======================================================== */
+/* TÍTULO TABLA                                              */
+/* ======================================================== */
+
+.titulo-tabla {
+    width: 100%;
+}
+
+.titulo-tabla h3 {
+    margin-top: 0;
+
+    margin-bottom: 5px;
+
+    color: rgb(8, 99, 23);
+
+    text-align: left;
+}
+
+
+/* ======================================================== */
+/* BÚSQUEDA                                                  */
+/* ======================================================== */
 
 .barra-busqueda {
-    
-    padding: 10px;    
+    width: 100%;
+
+    padding: 10px 0;
 }
 
+
 .input-busqueda {
+    width: 100%;
+
     padding: 10px;
 
     border: 1px solid #ccc;
+
     border-radius: 6px;
-    width: 750px;
+
+    background-color: white;
 
     font-size: 15px;
+
     outline: none;
 }
 
+.input-busqueda:focus {
+    border-color: #a1c247;
+}
 
-/* TABLA */
+
+/* ======================================================== */
+/* TABLA                                                     */
+/* ======================================================== */
 
 .table {
     width: 100%;
 
     border-collapse: separate;
+
     border-spacing: 0 10px;
 }
 
 
-/* ====================== */
-/* ENCABEZADOS            */
-/* ====================== */
+/* ======================================================== */
+/* ENCABEZADOS                                               */
+/* ======================================================== */
 
 .encabezados th {
+    padding: 12px;
+
     background-color: #d4f0be;
 
     color: rgb(8, 99, 23);
 
-    padding: 12px;
-
     white-space: nowrap;
+
+    text-align: center;
 }
 
 .encabezados th:first-child {
@@ -297,9 +426,9 @@ body{
 }
 
 
-/* ====================== */
-/* FILAS                  */
-/* ====================== */
+/* ======================================================== */
+/* FILAS                                                     */
+/* ======================================================== */
 
 .filas td {
     padding: 15px 10px;
@@ -309,6 +438,8 @@ body{
     border-bottom: 1px solid #ccc;
 
     white-space: nowrap;
+
+    text-align: center;
 }
 
 .filas:hover td {
@@ -316,20 +447,35 @@ body{
 }
 
 
-/* ====================== */
-/* BOTÓN EDITAR           */
-/* ====================== */
+/* ======================================================== */
+/* BOTÓN EDITAR                                              */
+/* ======================================================== */
 
 .btn-editar {
-    background-color: #8f8989;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
 
     border: none;
 
-    padding: 5px 10px;
-
     border-radius: 6px;
 
+    background-color: #e6f7ff;
+
+    color: #1890ff;
+
     cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-editar:hover {
+    background-color: #cceeff;
+
+    transform: scale(1.05);
 }
 
 .btn-editar:active {
@@ -337,29 +483,240 @@ body{
 }
 
 
-/* ====================== */
-/* BOTÓN ELIMINAR         */
-/* ====================== */
+/* ======================================================== */
+/* BOTÓN ELIMINAR                                            */
+/* ======================================================== */
 
 .btn-eliminar {
-    background-color: rgb(243, 27, 27);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
 
     border: none;
 
-    padding: 5px 10px;
-
     border-radius: 6px;
 
+    background-color: #ffe5e5;
+
+    color: #d93636;
+
     cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #ffd0d0;
+
+    transform: scale(1.05);
 }
 
 .btn-eliminar:active {
-    background-color: rgb(156, 31, 31);
+    background-color: rgba(156, 31, 31, 0.199);
 }
 
 
 /* ======================================================== */
-/* VISTA CELULAR                                            */
+/* VISTA TABLET                                             */
+/* 701px - 1024px                                           */
+/* ======================================================== */
+
+@media (min-width: 701px) and (max-width: 1024px) {
+
+    /* ====================== */
+    /* HEADER                 */
+    /* ====================== */
+
+    .header {
+        padding: 10px 15px;
+    }
+
+    .btn-volver {
+        width: 25px;
+        height: 25px;
+
+        margin-left: 5px;
+        margin-right: 12px;
+    }
+
+    .btn-volver i {
+        font-size: 17px;
+    }
+
+    .icono {
+        margin-top: 6px;
+
+        font-size: 35px;
+    }
+
+    .header-text {
+        margin-left: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+
+    /* ====================== */
+    /* USUARIO                */
+    /* ====================== */
+
+    .usuario {
+        margin-right: 10px;
+
+        padding: 6px 8px;
+    }
+
+    .usuario > i {
+        width: 32px;
+        height: 32px;
+
+        margin-right: 8px;
+
+        font-size: 15px;
+    }
+
+    .usuario-info strong {
+        font-size: 12px;
+    }
+
+    .usuario-info span {
+        font-size: 10px;
+    }
+
+
+    /* ============================== */
+    /* FORMULARIO + TABLA             */
+    /* ============================== */
+
+    .formulario-y-tabla {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        width: calc(100% - 20px);
+
+        margin: 30px auto 40px;
+    }
+
+
+    /* ====================== */
+    /* FORMULARIO             */
+    /* ====================== */
+
+    .cont-formulario {
+        width: 35%;
+
+        min-width: 250px;
+
+        margin: 20px 0;
+
+        padding: 18px;
+    }
+
+    .formulario {
+        gap: 15px;
+    }
+
+    .campo {
+        gap: 5px;
+    }
+
+    .campo label {
+        font-size: 14px;
+    }
+
+    .input-formulario {
+        padding: 9px;
+
+        font-size: 14px;
+    }
+
+    .btn-guardar {
+        padding: 12px 10px;
+
+        font-size: 14px;
+    }
+
+
+    /* ====================== */
+    /* TABLA                  */
+    /* ====================== */
+
+    .cont-tabla {
+        width: 65%;
+
+        height: 500px;
+
+        margin: 20px 0;
+
+        padding: 15px;
+
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+
+    /* ====================== */
+    /* BÚSQUEDA               */
+    /* ====================== */
+
+    .barra-busqueda {
+        padding: 8px 0;
+    }
+
+    .input-busqueda {
+        width: 100%;
+
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+
+    /* ====================== */
+    /* TABLA                  */
+    /* ====================== */
+
+    .table {
+        width: 100%;
+
+        min-width: 650px;
+
+        border-collapse: separate;
+
+        border-spacing: 0 8px;
+    }
+
+    .encabezados th {
+        padding: 10px 8px;
+
+        font-size: 13px;
+    }
+
+    .filas td {
+        padding: 13px 8px;
+
+        font-size: 13px;
+    }
+
+    .btn-editar,
+    .btn-eliminar {
+        width: 30px;
+        height: 30px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ======================================================== */
+/* VISTA CELULAR                                             */
+/* Hasta 700px                                               */
 /* ======================================================== */
 
 @media (max-width: 700px) {
@@ -369,11 +726,15 @@ body{
     /* ====================== */
 
     .header {
+        width: 100%;
+
         padding: 10px;
     }
 
 
-    /* BOTÓN VOLVER */
+    /* ====================== */
+    /* BOTÓN VOLVER           */
+    /* ====================== */
 
     .btn-volver {
         width: 24px;
@@ -385,37 +746,58 @@ body{
 
     .btn-volver i {
         margin-top: 4px;
+
         font-size: 16px;
     }
 
 
-    /* ICONO */
+    /* ====================== */
+    /* ICONO                  */
+    /* ====================== */
 
     .icono {
         margin-top: 5px;
+
         font-size: 30px;
     }
 
 
-    /* TEXTO */
+    /* ====================== */
+    /* TEXTO                  */
+    /* ====================== */
 
     .header-text {
         margin-left: 8px;
+
+        flex: 1;
+
+        min-width: 0;
     }
 
     .header h1 {
         font-size: 16px;
+
         line-height: 1.1;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
     }
 
 
     /* ====================== */
-    /* USUARIO               */
+    /* USUARIO                */
     /* ====================== */
 
     .usuario {
+        margin-left: 5px;
         margin-right: 0;
+
         padding: 5px;
+
+        background-color: transparent;
     }
 
     .usuario > i {
@@ -443,6 +825,10 @@ body{
 
         align-items: center;
 
+        gap: 10px;
+
+        width: 100%;
+
         margin: 20px 0 40px;
     }
 
@@ -452,17 +838,14 @@ body{
     /* ====================== */
 
     .cont-formulario {
-        width: calc(100% - 40px);
+        width: calc(100% - 30px);
 
-        box-sizing: border-box;
-
-        height: auto;
+        min-width: 0;
 
         margin: 20px 0;
 
         padding: 20px;
     }
-
 
     .formulario {
         gap: 15px;
@@ -472,10 +855,12 @@ body{
         gap: 6px;
     }
 
+    .campo label {
+        font-size: 14px;
+    }
+
     .input-formulario {
         width: 100%;
-
-        box-sizing: border-box;
 
         padding: 10px;
 
@@ -490,8 +875,6 @@ body{
     .btn-guardar {
         width: 100%;
 
-        box-sizing: border-box;
-
         padding: 12px 15px;
 
         margin-bottom: 0;
@@ -500,60 +883,60 @@ body{
     }
 
 
-    /* ================================================== */
-    /* TABLA EN CELULAR                                   */
-    /* ================================================== */
+    /* ====================== */
+    /* CONTENEDOR TABLA       */
+    /* ====================== */
 
     .cont-tabla {
-        width: calc(100% - 30px);
-
-        box-sizing: border-box;
+        width: calc(100% - 20px);
 
         height: 500px;
 
         margin: 20px 0;
 
-        padding: 15px;
+        padding: 12px;
 
-        border-radius: 10px;
-
-        /*
-         * La tabla conserva su tamaño.
-         * Solo el contenedor permite verla
-         * horizontalmente.
-         */
         overflow-x: auto;
         overflow-y: auto;
     }
 
-    .titulo-tabla{
-        width:600px;
+
+    /* ====================== */
+    /* TÍTULO                 */
+    /* ====================== */
+
+    .titulo-tabla {
+        width: 100%;
     }
 
-    .titulo-tabla h3{
-        margin-bottom:0;
+    .titulo-tabla h3 {
+        margin-top: 0;
 
+        margin-bottom: 5px;
+
+        font-size: 18px;
     }
+
+
+    /* ====================== */
+    /* BARRA BÚSQUEDA         */
+    /* ====================== */
 
     .barra-busqueda {
-    
-        padding: 10px;    
+        width: 100%;
+
+        padding: 8px 0;
     }
 
     .input-busqueda {
+        width: 100%;
+
+        min-width: 0;
+
         padding: 10px;
 
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        width: 580px;
-        min-width: 500px;
-    
-
-        font-size: 15px;
-        outline: none;
+        font-size: 14px;
     }
-
-    
 
 
     /* ====================== */
@@ -561,16 +944,13 @@ body{
     /* ====================== */
 
     .table {
-        
-        width: 600px;
+        width: max-content;
 
-        min-width: 200px;
-
-        table-layout: auto;
+        min-width: 650px;
 
         border-collapse: separate;
 
-        border-spacing: 0 10px;
+        border-spacing: 0 8px;
     }
 
 
@@ -579,21 +959,19 @@ body{
     /* ====================== */
 
     .encabezados th {
-        padding: 12px;
+        padding: 10px;
 
-        font-size: 13px;
+        font-size: 12px;
 
         white-space: nowrap;
     }
 
-
     .encabezados th:first-child {
-        border-radius: 10px 0 0 10px;
-        
+        border-radius: 8px 0 0 8px;
     }
 
     .encabezados th:last-child {
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 8px 8px 0;
     }
 
 
@@ -602,9 +980,9 @@ body{
     /* ====================== */
 
     .filas td {
-        padding: 15px 10px;
+        padding: 12px 10px;
 
-        font-size: 13px;
+        font-size: 12px;
 
         white-space: nowrap;
 
@@ -613,20 +991,104 @@ body{
 
 
     /* ====================== */
-    /* BOTONES DE ACCIONES    */
+    /* BOTONES                */
     /* ====================== */
 
     .btn-editar,
     .btn-eliminar {
-        padding: 5px 8px;
+        width: 30px;
+        height: 30px;
+
+        padding: 5px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ======================================================== */
+/* CELULARES PEQUEÑOS                                       */
+/* Hasta 400px                                               */
+/* ======================================================== */
+
+@media (max-width: 400px) {
+
+    .header {
+        padding: 8px;
+    }
+
+    .btn-volver {
+        width: 22px;
+        height: 22px;
+
+        margin-right: 6px;
+    }
+
+    .btn-volver i {
+        font-size: 14px;
+    }
+
+    .icono {
+        font-size: 27px;
+    }
+
+    .header-text {
+        margin-left: 6px;
+    }
+
+    .header h1 {
+        font-size: 13px;
+    }
+
+    .usuario > i {
+        width: 27px;
+        height: 27px;
 
         font-size: 12px;
     }
 
+
+    /* FORMULARIO */
+
+    .cont-formulario {
+        width: calc(100% - 20px);
+
+        padding: 15px;
+    }
+
+    .campo label {
+        font-size: 13px;
+    }
+
+    .input-formulario {
+        font-size: 13px;
+    }
+
+
+    /* TABLA */
+
+    .cont-tabla {
+        width: calc(100% - 10px);
+
+        padding: 10px;
+    }
+
+    .titulo-tabla h3 {
+        font-size: 16px;
+    }
+
+    .input-busqueda {
+        font-size: 13px;
+    }
+
+    .table {
+        min-width: 620px;
+    }
 }
 
 /* ======================================================== */
 /* VISTA TABLET                                             */
+/* 701px - 1024px                                          */
 /* ======================================================== */
 
 @media (min-width: 701px) and (max-width: 1024px) {
@@ -649,6 +1111,7 @@ body{
 
     .btn-volver i {
         font-size: 17px;
+        margin-top: 5px;
     }
 
     .icono {
@@ -692,19 +1155,18 @@ body{
     }
 
 
-    /* ============================== */
-    /* FORMULARIO + TABLA             */
-    /* ============================== */
+    /* ====================== */
+    /* FORMULARIO + TABLA     */
+    /* ====================== */
 
     .formulario-y-tabla {
-        display: flex;
-
-        align-items: flex-start;
-        justify-content: center;
+        width: calc(100% - 20px);
 
         gap: 15px;
 
-        margin: 30px 10px 40px;
+        margin: 30px auto 40px;
+
+        align-items: flex-start;
     }
 
 
@@ -713,13 +1175,10 @@ body{
     /* ====================== */
 
     .cont-formulario {
-        box-sizing: border-box;
-
-        width: 32%;
+        width: 35%;
         min-width: 250px;
 
         margin: 20px 0;
-
         padding: 18px;
     }
 
@@ -736,8 +1195,6 @@ body{
     }
 
     .input-formulario {
-        box-sizing: border-box;
-
         width: 100%;
 
         padding: 9px;
@@ -753,8 +1210,6 @@ body{
     .btn-guardar {
         width: 100%;
 
-        box-sizing: border-box;
-
         padding: 12px 10px;
 
         font-size: 14px;
@@ -766,9 +1221,7 @@ body{
     /* ====================== */
 
     .cont-tabla {
-        box-sizing: border-box;
-
-        width: 68%;
+        width: 65%;
 
         height: 500px;
 
@@ -782,16 +1235,11 @@ body{
 
 
     /* ====================== */
-    /* TÍTULO DE LA TABLA     */
+    /* TÍTULO                 */
     /* ====================== */
-
-    .titulo-tabla {
-        width: 100%;
-    }
 
     .titulo-tabla h3 {
         font-size: 18px;
-        margin-bottom: 5px;
     }
 
 
@@ -804,8 +1252,6 @@ body{
     }
 
     .input-busqueda {
-        box-sizing: border-box;
-
         width: 100%;
 
         padding: 10px;
@@ -819,12 +1265,279 @@ body{
     /* ====================== */
 
     .table {
-        width: 100%;
+        width: max-content;
 
-        min-width: 600px;
+        min-width: 650px;
 
         border-collapse: separate;
-        border-spacing: 0 10px;
+
+        border-spacing: 0 8px;
+    }
+
+    .encabezados th {
+        padding: 10px 8px;
+
+        font-size: 13px;
+    }
+
+    .filas td {
+        padding: 13px 8px;
+
+        font-size: 13px;
+    }
+
+
+    /* ====================== */
+    /* BOTONES                */
+    /* ====================== */
+
+    .btn-editar,
+    .btn-eliminar {
+        width: 30px;
+        height: 30px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ======================================================== */
+/* VISTA CELULAR                                            */
+/* Hasta 700px                                              */
+/* ======================================================== */
+
+@media (max-width: 700px) {
+
+    /* ====================== */
+    /* HEADER                 */
+    /* ====================== */
+
+    .header {
+        width: 100%;
+
+        padding: 10px;
+    }
+
+
+    /* ====================== */
+    /* BOTÓN VOLVER           */
+    /* ====================== */
+
+    .btn-volver {
+        width: 24px;
+        height: 24px;
+
+        margin-left: 0;
+        margin-right: 8px;
+    }
+
+    .btn-volver i {
+        margin-top: 4px;
+
+        font-size: 16px;
+    }
+
+
+    /* ====================== */
+    /* ICONO                  */
+    /* ====================== */
+
+    .icono {
+        margin-top: 5px;
+
+        font-size: 30px;
+    }
+
+
+    /* ====================== */
+    /* TEXTO                  */
+    /* ====================== */
+
+    .header-text {
+        flex: 1;
+
+        min-width: 0;
+
+        margin-left: 8px;
+    }
+
+    .header h1 {
+        font-size: 16px;
+
+        line-height: 1.1;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* ====================== */
+    /* USUARIO                */
+    /* ====================== */
+
+    .usuario {
+        margin-left: 5px;
+        margin-right: 0;
+
+        padding: 5px;
+
+        background-color: transparent;
+    }
+
+    .usuario > i {
+        width: 30px;
+        height: 30px;
+
+        margin-right: 0;
+
+        font-size: 14px;
+    }
+
+    .usuario-info {
+        display: none;
+    }
+
+
+    /* ====================== */
+    /* FORMULARIO + TABLA     */
+    /* ====================== */
+
+    .formulario-y-tabla {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+
+        width: 100%;
+
+        margin: 20px 0 40px;
+    }
+
+
+    /* ====================== */
+    /* FORMULARIO             */
+    /* ====================== */
+
+    .cont-formulario {
+        width: calc(100% - 30px);
+
+        min-width: 0;
+
+        margin: 20px 0;
+
+        padding: 20px;
+    }
+
+    .formulario {
+        gap: 15px;
+    }
+
+    .campo {
+        gap: 6px;
+    }
+
+    .campo label {
+        font-size: 14px;
+    }
+
+    .input-formulario {
+        width: 100%;
+
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+
+    /* ====================== */
+    /* BOTÓN GUARDAR          */
+    /* ====================== */
+
+    .btn-guardar {
+        width: 100%;
+
+        padding: 12px 15px;
+
+        margin-bottom: 0;
+
+        font-size: 14px;
+    }
+
+
+    /* ====================== */
+    /* TABLA                  */
+    /* ====================== */
+
+    .cont-tabla {
+        width: calc(100% - 20px);
+
+        height: 500px;
+
+        margin: 20px 0;
+
+        padding: 12px;
+
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+
+    /* ====================== */
+    /* TÍTULO                 */
+    /* ====================== */
+
+    .titulo-tabla {
+        width: 100%;
+    }
+
+    .titulo-tabla h3 {
+        margin-top: 0;
+
+        margin-bottom: 5px;
+
+        font-size: 18px;
+    }
+
+
+    /* ====================== */
+    /* BÚSQUEDA               */
+    /* ====================== */
+
+    .barra-busqueda {
+        width: 100%;
+
+        padding: 8px 0;
+    }
+
+    .input-busqueda {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+
+    /* ====================== */
+    /* TABLA INTERNA          */
+    /* ====================== */
+
+    .table {
+        width: max-content;
+
+        min-width: 650px;
+
+        border-collapse: separate;
+
+        border-spacing: 0 8px;
     }
 
 
@@ -833,11 +1546,19 @@ body{
     /* ====================== */
 
     .encabezados th {
-        padding: 10px 8px;
+        padding: 10px;
 
-        font-size: 13px;
+        font-size: 12px;
 
         white-space: nowrap;
+    }
+
+    .encabezados th:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .encabezados th:last-child {
+        border-radius: 0 8px 8px 0;
     }
 
 
@@ -846,9 +1567,9 @@ body{
     /* ====================== */
 
     .filas td {
-        padding: 13px 8px;
+        padding: 12px 10px;
 
-        font-size: 13px;
+        font-size: 12px;
 
         white-space: nowrap;
 
@@ -857,14 +1578,146 @@ body{
 
 
     /* ====================== */
-    /* BOTONES DE ACCIONES    */
+    /* BOTONES                */
     /* ====================== */
 
     .btn-editar,
     .btn-eliminar {
-        padding: 5px 8px;
+        width: 30px;
+        height: 30px;
+
+        padding: 5px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ======================================================== */
+/* CELULARES PEQUEÑOS                                      */
+/* Hasta 400px                                              */
+/* ======================================================== */
+
+@media (max-width: 400px) {
+
+    /* ====================== */
+    /* HEADER                 */
+    /* ====================== */
+
+    .header {
+        padding: 8px;
+    }
+
+    .btn-volver {
+        width: 22px;
+        height: 22px;
+
+        margin-right: 6px;
+    }
+
+    .btn-volver i {
+        font-size: 14px;
+    }
+
+    .icono {
+        font-size: 27px;
+    }
+
+    .header-text {
+        margin-left: 6px;
+    }
+
+    .header h1 {
+        font-size: 13px;
+    }
+
+
+    /* ====================== */
+    /* USUARIO                */
+    /* ====================== */
+
+    .usuario > i {
+        width: 27px;
+        height: 27px;
 
         font-size: 12px;
     }
 
+
+    /* ====================== */
+    /* FORMULARIO             */
+    /* ====================== */
+
+    .cont-formulario {
+        width: calc(100% - 20px);
+
+        padding: 15px;
+    }
+
+    .formulario {
+        gap: 13px;
+    }
+
+    .campo label {
+        font-size: 13px;
+    }
+
+    .input-formulario {
+        padding: 9px;
+
+        font-size: 13px;
+    }
+
+    .btn-guardar {
+        padding: 11px;
+
+        font-size: 13px;
+    }
+
+
+    /* ====================== */
+    /* TABLA                  */
+    /* ====================== */
+
+    .cont-tabla {
+        width: calc(100% - 10px);
+
+        height: 450px;
+
+        padding: 10px;
+    }
+
+    .titulo-tabla h3 {
+        font-size: 16px;
+    }
+
+    .input-busqueda {
+        padding: 9px;
+
+        font-size: 13px;
+    }
+
+    .table {
+        min-width: 620px;
+    }
+
+    .encabezados th {
+        padding: 9px;
+
+        font-size: 11px;
+    }
+
+    .filas td {
+        padding: 10px 8px;
+
+        font-size: 11px;
+    }
+
+    .btn-editar,
+    .btn-eliminar {
+        width: 28px;
+        height: 28px;
+
+        font-size: 11px;
+    }
 }
