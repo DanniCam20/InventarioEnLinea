@@ -41,127 +41,102 @@
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="main">     
+    <main class="main">
+        <section>
+            <div class="formulario-y-tabla">
+                <!-- CONTENIDO DE FORMLARIO  -->
+                <div class="cont-formulario">
+                    <form action="" method="" class="formulario">
+                        <div class="campo">
+                            <label for=""> Nombre de produto </label>
+                            <input type="text" class="input-formulario" id="producto" placeholder="Ej. Portátil">
+                        </div>
 
-        <div class="formulario-y-tabla">
+                        <div class="campo">
+                            <label for=""> Stock </label>
+                            <input type="number" class="input-formulario" id="stock" placeholder="Ej. 100">
+                        </div>
 
-            <!-- CONTENIDO DE FORMLARIO  -->
-            <div class="cont-formulario">
+                        <div class="campo">
+                            <label for=""> Categoría </label>
+                            <input type="text" class="input-formulario" id="categoria" placeholder="Ej. Producto, Stock, Categoria...">
+                        </div>
 
-                 <form action="" method="" class="formulario">
+                        <div class="campo">
+                            <label for=""> Valor Unitario </label>
+                            <input type="number" min="0" step="0.01" class="input-formulario" id="valor" placeholder="Ej. $ 12.000">
+                        </div>
 
-                     <div class="campo">
-                         <label for=""> Nombre de produto </label>
-                         <input type="text" class="input-formulario" id="producto" placeholder="Ej. Portátil">
-                     </div>
+                        <div class="campo">
+                            <label for=""> Proovedor </label>
+                            <input type="text" class="input-formulario" id="proveedor" placeholder="Ej. Colombia SAS">
+                        </div>
 
-                     <div class="campo">
-                         <label for=""> Stock </label>
-                         <input type="number" class="input-formulario" id="stock" placeholder="Ej. 100">
-                     </div>
+                        <button type="submit" id="btn-guardar" class="btn-guardar"> Guardar Producto </button>
 
-                     <div class="campo">
-                         <label for=""> Categoría </label>
-                         <input type="text" class="input-formulario" id="categoria" placeholder="Ej. Producto, Stock, Categoria...">
-                     </div>
-
-                     <div class="campo">
-                         <label for=""> Valor Unitario </label>
-                         <input type="number" min="0" step="0.01" class="input-formulario" id="valor" placeholder="Ej. $ 12.000">
-                     </div>
-
-                     <div class="campo"> 
-                         <label for=""> Proovedor </label>
-                         <input type="text" class="input-formulario" id="proveedor" placeholder="Ej. Colombia SAS">
-                     </div>
-
-                     <button type="submit" id="btn-guardar" class="btn-guardar"> Guardar Producto </button>
-
-                     <div id="mensaje" class="mensaje">
-                        
-                     </div>
-
-                 </form>
-
-            </div>
-
-            
-
-            <!-- TABLA Y CONTENIDO -->
-            <div class="cont-tabla">
-
-                <div class="titulo-tabla">
-                    <h3>
-                        Productos Registrados
-                    </h3> 
-
-                    <div class="barra-busqueda">
-                        <input type="search" class="input-busqueda" id="input-busqueda" placeholder=" Filtrar por nombre...">
-                    </div>
+                        <div id="mensaje" class="mensaje">
+                        </div>
+                    </form>
                 </div>
 
-                
+                <!-- TABLA Y CONTENIDO -->
+                <div class="cont-tabla">
+                    <div class="titulo-tabla">
+                        <h3>
+                            Productos Registrados
+                        </h3>
 
-                <table class="table">
+                        <div class="barra-busqueda">
+                            <input type="search" class="input-busqueda" id="input-busqueda" placeholder=" Filtrar por nombre...">
+                        </div>
+                    </div>
 
-                    <!-- ENCABEZADOS DE LA TABLA -->
-                    <thead class="encabezados">
-                        <tr>
-                            </th>
-                            <th>Productos</th>
-                            <th>Stock</th>
-                            <th>Categoria</th>
-                            <th>Valor Unitario</th>
-                            <th>Proveedor</th>
-                            <th>Acciones</th>
-                        </tr> 
+                    <table class="table">
+                        <!-- ENCABEZADOS DE LA TABLA -->
+                        <thead class="encabezados">
+                            <tr>
+                                <th>Productos</th>
+                                <th>Stock</th>
+                                <th>Categoria</th>
+                                <th>Valor Unitario</th>
+                                <th>Proveedor</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
 
-                        
+                        <tbody id="tabla-productos">
+                            <tr class="filas">
+                                <td>
+                                    Desktop DELL
+                                </td>
+                                <td>
+                                    150
+                                </td>
+                                <td>
+                                    PC
+                                </td>
+                                <td>
+                                    1200
+                                </td>
+                                <td>
+                                    Celu-Fer SAS
+                                </td>
 
-                    </thead>
-
-                    <tbody id="tabla-productos">
-
-                        <tr class="filas">
-                            <td>
-                                Desktop DELL
-                            </td>
-                            <td>
-                                150 
-                            </td>
-                             <td>
-                                PC
-                            </td> 
-                            <td>
-                                1200
-                            </td>
-                            <td>
-                                Celu-Fer SAS
-                            </td>
-
-                            <!-- BOTONES DE ACCIONES -->
-                            <td>
-                                <button class="btn-editar">
-                                    <i class="fi fi-sr-pencil"></i>
-                                </button>
-                                <button class="btn-eliminar">
-                                    <i class="fi fi-sr-trash"></i>
-                                </button>
-                            </td>
-                            
-                        </tr>    
-
-                    </tbody>
-
-                </table>
-
-                
-
-            </div>   
-            
-        </div>
-
-
+                                <!-- BOTONES DE ACCIONES -->
+                                <td>
+                                    <button class="btn-editar">
+                                        <i class="fi fi-sr-pencil"></i>
+                                    </button>
+                                    <button class="btn-eliminar">
+                                        <i class="fi fi-sr-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
 <script src="../js/productos.js"></script>

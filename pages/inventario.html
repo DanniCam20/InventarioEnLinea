@@ -46,12 +46,13 @@
     <main class="main">     
 
         <!-- RESUMEN DEL INVENTARIO    -->
-    
-        <section class="categoria">
+        <section>
 
-            <h2>
-                Resumen del inventario
-            </h2>
+            <div class="categoria">
+                <h2>
+                    Resumen 
+                </h2>
+            </div>
 
             <div class="resumen-tarjetas">
 
@@ -65,7 +66,7 @@
                     <div class="contenido-tarjeta">
                         <span>Productos</span>
                         <div class="info-producto">
-                            <strong>2</strong>
+                            <strong>500</strong>
                         </div>
                     </div>
 
@@ -82,7 +83,7 @@
                     <div class="contenido-tarjeta">
                         <span >Stock disponible</span>
                         <div class="info-disponible">
-                            <strong>3.000.000</strong>
+                            <strong>69</strong>
                         </div>
                     </div>
 
@@ -99,7 +100,7 @@
                     <div class="contenido-tarjeta">
                         <span>Stock bajo</span>
                         <div class="info-bajo">
-                            <strong>2</strong>
+                            <strong>24</strong>
                         </div>
                     </div>
 
@@ -116,7 +117,7 @@
                     <div class="contenido-tarjeta">
                         <span>Agotados</span>
                         <div class="info-agotado">
-                            <strong>2</strong>
+                            <strong>15</strong>
                         </div>
                     </div>
                     
@@ -126,22 +127,17 @@
             </div>
 
         </section>
-
+ 
         <!-- ========================= -->
         <!-- INVENTARIO                 -->
         <!-- ========================= -->
 
-        <section class="categoria">
+        <section>
 
-            <div class="inventario-header">
 
-                <h2>
-                    Inventario
-                </h2>
-
+            <div class="busqueda">
 
                 <!-- BUSCADOR Y FILTRO -->
-
                 <div class="herramientas">
 
                     <div class="buscador">
@@ -157,7 +153,7 @@
                     </div>
 
 
-                    <select id="filtro-estado">
+                    <select class="selector" id="filtro-estado">
 
                         <option value="todos">
                             Todos
@@ -186,131 +182,108 @@
             <!-- TABLA                     -->
             <!-- ========================= -->
 
-            <div class="tabla-container">
+            <div class="cont-tabla">
 
-                <table class="tabla-inventario">
+                <table class="table">
 
-                    <thead>
-
+                    <!-- ENCABEZADOS DE LA TABLA -->
+                    <thead class="encabezados">
                         <tr>
-
-                            <th>
-                                Producto
-                            </th>
-
-                            <th>
-                                Stock
-                            </th>
-
-                            <th>
-                                Valor unitario
-                            </th>
-
-                            <th>
-                                Proveedor
-                            </th>
-
-                            <th>
-                                Estado
-                            </th>
-
+                            <th>Producto</th>
+                            <th>Stock</th>
+                            <th>Valor unitario</th>
+                            <th>Proveedor</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
                         </tr>
-
                     </thead>
 
 
                     <tbody id="tabla-inventario">
 
-                        <!-- PRODUCTO 1 -->
-
-                        <tr>
+                        <tr class="filas">
 
                             <td>
                                 Teclado inalámbrico
                             </td>
-
                             <td>
                                 25
                             </td>
-
                             <td>
                                 $50.000
                             </td>
-
                             <td>
                                 Distribuciones XYZ
                             </td>
-
                             <td>
-
-                                <span class="estado disponible">
+                                <span class="estado-disponible">
                                     Disponible
                                 </span>
-
                             </td>
-
+                            <td>
+                                <button class="btn-ver">
+                                    <i class="fi fi-sr-eye"></i>
+                                </button>
+                            </td>
                         </tr>
 
 
                         <!-- PRODUCTO 2 -->
 
-                        <tr>
-
+                        <tr class="filas">
                             <td>
                                 Mouse inalámbrico
                             </td>
-
                             <td>
                                 5
                             </td>
-
                             <td>
                                 $25.000
                             </td>
-
                             <td>
                                 Distribuciones ABC
                             </td>
-
                             <td>
-
                                 <span class="estado bajo">
                                     Stock bajo
                                 </span>
-
                             </td>
-
+                            <td>
+                                <button class="btn-ver">
+                                    <i class="fi fi-sr-eye"></i>
+                                </button>
+                            </td>
                         </tr>
 
 
                         <!-- PRODUCTO 3 -->
 
-                        <tr>
-
+                        <tr class="filas">
                             <td>
                                 Monitor Dell
                             </td>
-
                             <td>
                                 0
                             </td>
-
                             <td>
                                 $800.000
                             </td>
-
                             <td>
                                 Celu-Fer SAS
                             </td>
-
                             <td>
 
                                 <span class="estado agotado">
                                     Agotado
                                 </span>
+                                
 
                             </td>
-
+                             <td>
+                                <button class="btn-ver">
+                                    <i class="fi fi-sr-eye"></i>
+                                </button>
+                            </td>
                         </tr>
 
 

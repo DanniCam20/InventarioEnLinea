@@ -2,6 +2,7 @@ body{
     margin: 0;
     text-align: center;
     justify-content: center;
+    background-color: #cbdfbc21;
     
 }
 
@@ -270,16 +271,6 @@ body{
 
     border-collapse: separate;
     border-spacing: 0 10px;
-}
-
-
-/* CAPTION */
-
-.table caption {
-    font-size: 17px;
-    padding: 5px;
-
-    font-weight: bold;
 }
 
 

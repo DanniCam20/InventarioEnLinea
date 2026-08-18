@@ -2,6 +2,7 @@ body{
     margin: 0;
     text-align: center;
     justify-content: center;
+    background-color: #cbdfbc21;
     
 }
 
@@ -159,8 +160,9 @@ body{
     border-radius: 20px;
     justify-content: center;
     padding: 10px;
-    margin: 100px auto;
+    margin: 100px;
     margin-top: 0;
+    margin-bottom: 20px;
     gap: 20px;
 }
 
@@ -199,9 +201,9 @@ body{
 }
 
 .info-producto strong{
-    font-size: 20px;
+    font-size: 25px;
      margin-bottom: 0;
-    margin-right: 55px;
+    /* margin-right: 55px; */
     color: rgb(25, 112, 17);
     
 }
@@ -231,9 +233,9 @@ body{
 }
 
 .info-disponible strong{
-    font-size: 20px;
+    font-size: 25px;
      margin-bottom: 0;
-    margin-right: 55px;
+    /* margin-right: 55px; */
     color: #0e44b9;
 }
 
@@ -260,9 +262,9 @@ body{
 }
 
 .info-bajo strong{
-    font-size: 20px;
+    font-size: 25px;
      margin-bottom: 0;
-    margin-right: 55px;
+    /* margin-right: 55px; */
     color: #F9A825;
 }
 
@@ -288,19 +290,10 @@ body{
     color: #E53935;
 }
 
-
- .contenido-tarjeta {
-    margin-right: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start
-
-}
-
 .info-agotado strong{
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 0;
-    margin-right: 55px;
+    /* margin-right: 55px; */
     color: #E53935;
 }
 
@@ -310,6 +303,137 @@ body{
 }
 
 
+/* Informacion de valores  */
+.contenido-tarjeta {
+    margin-right: 30px;
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contenido-tarjeta span{
+    color: #00000088;
+}
+
+
+
+
+/* ====================== */
+/* TABLA                  */
+/* ====================== */
+
+.cont-tabla {
+    margin: 20px auto;
+    width: 165vh;
+    height: 550px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #d4f0be60;
+    overflow-y: auto;
+}
+
+
+/* BÚSQUEDA */
+
+.busqueda {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.herramientas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* gap: 15px; */
+    width: 165vh;
+
+    width: 1200px;
+    padding: 10px;
+
+
+}
+
+
+/* ====================== */
+/* BUSCADOR               */
+/* ====================== */
+
+.buscador {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    /* width: 750px; */
+      flex: 1;
+}
+
+.buscador i {
+    position: absolute;
+    left: 14px;
+
+    font-size: 16px;
+    color: #086317;
+
+    pointer-events: none;
+}
+
+.buscador input {
+    box-sizing: border-box;
+
+    width: 97%;
+    height: 42px;
+
+    padding: 10px 15px 10px 40px;
+
+    border: 1px solid #c5d9b8;
+    border-radius: 9px;
+
+    background-color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+.buscador input:hover {
+    border-color: #a1c247;
+}
+
+.selector {
+    box-sizing: border-box;
+
+    width: 160px;
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #c5d9b8;
+    border-radius: 9px;
+
+    background-color: white;
+
+    color: #086317;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.selector:hover {
+    border-color: #a1c247;
+    background-color: #f7fbf4;
+}
 
 
 
@@ -318,6 +442,474 @@ body{
 
 
 
+/* TABLA */
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+
+/* ENCABEZADOS            */
+
+.encabezados th {
+    background-color: #d4f0be;
+
+    color: rgb(8, 99, 23);
+
+    padding: 12px;
+
+    white-space: nowrap;
+}
+
+.encabezados th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.encabezados th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* FILAS                  */
+
+.filas td {
+    padding: 15px 10px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #ccc;
+
+    white-space: nowrap;
+}
+
+.filas:hover td {
+    background-color: #d4f0be4d;
+}
+
+.btn-ver {
+    background-color: #6383c93a;
+
+    
+
+
+    border: none;
+
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.btn-ver:active {
+    background-color: #4e4c4c;
+}
+
+
+
+
+/* ======================================================== */
+/* VISTA CELULAR                                             */
+/* ======================================================== */
+
+@media (max-width: 700px) {
+
+    /* ====================== */
+    /* BODY                   */
+    /* ====================== */
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ====================== */
+    /* HEADER                 */
+    /* ====================== */
+
+    .header {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+
+    /* BOTÓN VOLVER */
+
+    .btn-volver {
+        width: 24px;
+        height: 24px;
+
+        margin-left: 0;
+        margin-right: 8px;
+
+        flex-shrink: 0;
+    }
+
+    .btn-volver i {
+        margin-top: 4px;
+        font-size: 16px;
+    }
+
+
+    /* ICONO PRINCIPAL */
+
+    .icono {
+        margin-top: 5px;
+        font-size: 30px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* TEXTO DEL HEADER */
+
+    .header-text {
+        margin-left: 8px;
+
+        min-width: 0;
+    }
+
+    .header h1 {
+        font-size: 16px;
+        line-height: 1.1;
+
+        white-space: nowrap;
+    }
+
+
+    /* ====================== */
+    /* USUARIO                */
+    /* ====================== */
+
+    .usuario {
+        margin-left: auto;
+        margin-right: 0;
+
+        padding: 5px;
+
+        flex-shrink: 0;
+    }
+
+    .usuario > i {
+        width: 30px;
+        height: 30px;
+
+        margin-right: 0;
+
+        font-size: 14px;
+    }
+
+    /* Ocultar texto */
+
+    .usuario-info {
+        display: none;
+    }
+
+
+    /* ====================== */
+    /* TITULO CATEGORIA       */
+    /* ====================== */
+
+    .categoria {
+        width: calc(100% - 30px);
+
+        margin: 50px auto 20px;
+    }
+
+    .categoria h2 {
+        margin-left: 5px;
+
+        font-size: 20px;
+    }
+
+
+    /* ====================== */
+    /* TARJETAS DE RESUMEN    */
+    /* ====================== */
+
+    .resumen-tarjetas {
+
+        width: calc(100% - 30px);
+
+        box-sizing: border-box;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+
+        padding: 5px;
+
+        margin: 0 auto 30px;
+
+        background-color: transparent;
+    }
+
+
+    /* TARJETA */
+
+    .tarjeta-resumen {
+
+        box-sizing: border-box;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        gap: 8px;
+
+        width: 100%;
+
+        min-width: 0;
+
+        margin: 0;
+
+        padding: 10px 10px;
+
+        border-radius: 10px;
+    }
+
+
+    /* ICONOS */
+
+    .icono-tarjeta-producto,
+    .icono-tarjeta-disponible,
+    .icono-tarjeta-bajo,
+    .icono-tarjeta-agotado {
+
+        width: 38px;
+        height: 38px;
+
+        padding: 8px;
+    }
+
+
+    .icono-tarjeta-producto i,
+    .icono-tarjeta-disponible i,
+    .icono-tarjeta-bajo i,
+    .icono-tarjeta-agotado i {
+
+        font-size: 24px;
+    }
+
+
+    /* INFORMACIÓN */
+
+    .info-producto strong,
+    .info-disponible strong,
+    .info-bajo strong,
+    .info-agotado strong {
+
+        font-size: 21px;
+    }
+
+
+    .info-producto,
+    .info-disponible,
+    .info-bajo,
+    .info-agotado {
+
+        padding: 0;
+
+        margin: 0;
+    }
+
+
+    /* TEXTO DE LAS TARJETAS */
+
+    .contenido-tarjeta {
+
+        width: 100%;
+
+        margin: 0;
+
+        text-align: center;
+    }
+
+    .contenido-tarjeta span {
+        font-size: 11px;
+    }
+
+
+    /* ====================== */
+    /* CONTENEDOR TABLA       */
+    /* ====================== */
+
+    .cont-tabla {
+
+        width: calc(100% - 20px);
+
+        box-sizing: border-box;
+
+        height: 500px;
+
+        margin: 20px auto;
+
+        padding: 10px;
+
+        border-radius: 10px;
+
+        /*
+         * El scroll horizontal queda
+         * solamente dentro de la tabla.
+         */
+
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+
+    /* ====================== */
+    /* HERRAMIENTAS           */
+    /* ====================== */
+
+    .busqueda {
+        width: 100%;
+    }
+
+    .herramientas {
+
+        width: 90%;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        padding: 5px;
+    }
+
+    /* ====================== */
+    /* BUSCADOR               */
+    /* ====================== */
+
+    .buscador {
+
+        width: 100%;
+
+        flex: none;
+    }
+
+
+    .buscador input {
+
+        width: 100%;
+
+        height: 40px;
+
+        box-sizing: border-box;
+
+        font-size: 13px;
+    }
+
+
+    .buscador i {
+        left: 12px;
+
+        font-size: 14px;
+    }
+
+
+    /* ====================== */
+    /* SELECTOR               */
+    /* ====================== */
+
+    .selector {
+
+        width: 100%;
+
+        height: 40px;
+
+        font-size: 13px;
+    }
+
+
+    /* ====================== */
+    /* TABLA                  */
+    /* ====================== */
+
+    .table {
+
+        /*
+         * La tabla conserva un tamaño
+         * suficiente para sus columnas.
+         */
+
+        width: 900px;
+
+        min-width: 900px;
+
+        table-layout: auto;
+
+        border-collapse: separate;
+
+        border-spacing: 0 8px;
+    }
+
+
+    /* ====================== */
+    /* ENCABEZADOS            */
+    /* ====================== */
+
+    .encabezados th {
+
+        padding: 11px 10px;
+
+        font-size: 12px;
+
+        white-space: nowrap;
+    }
+
+
+    .encabezados th:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .encabezados th:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+
+
+    /* ====================== */
+    /* FILAS                  */
+    /* ====================== */
+
+    .filas td {
+
+        padding: 12px 10px;
+
+        font-size: 12px;
+
+        white-space: nowrap;
+
+        text-align: center;
+    }
+
+
+    /* ====================== */
+    /* BOTÓN VER              */
+    /* ====================== */
+
+    .btn-ver {
+
+        padding: 5px 8px;
+
+        font-size: 12px;
+    }
+
+}
 
 
 
