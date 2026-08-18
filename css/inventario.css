@@ -912,7 +912,273 @@ body{
 }
 
 
+/* ======================================================== */
+/* VISTA TABLET                                            */
+/* ======================================================== */
 
+@media (min-width: 701px) and (max-width: 1100px) {
+
+    /* ====================== */
+    /* HEADER                 */
+    /* ====================== */
+
+    .header {
+        padding: 10px 15px;
+    }
+
+    .btn-volver {
+        width: 25px;
+        height: 25px;
+
+        margin-left: 5px;
+        margin-right: 12px;
+    }
+
+    .btn-volver i {
+        font-size: 17px;
+    }
+
+    .icono {
+        font-size: 35px;
+    }
+
+    .header-text {
+        margin-left: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+
+    /* ====================== */
+    /* USUARIO                */
+    /* ====================== */
+
+    .usuario {
+        margin-right: 10px;
+        padding: 6px 10px;
+    }
+
+    .usuario > i {
+        width: 32px;
+        height: 32px;
+
+        margin-right: 8px;
+
+        font-size: 15px;
+    }
+
+    .usuario-info strong {
+        font-size: 13px;
+    }
+
+    .usuario-info span {
+        font-size: 10px;
+    }
+
+
+    /* ====================== */
+    /* TÍTULO CATEGORÍA       */
+    /* ====================== */
+
+    .categoria {
+        width: calc(100% - 40px);
+
+        margin: 60px auto 20px;
+    }
+
+    .categoria h2 {
+        margin-left: 0;
+        font-size: 22px;
+    }
+
+
+    /* ====================== */
+    /* TARJETAS DE RESUMEN    */
+    /* ====================== */
+
+    .resumen-tarjetas {
+        width: calc(100% - 40px);
+
+        box-sizing: border-box;
+
+        margin: 20px auto;
+
+        padding: 10px;
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+    .tarjeta-resumen {
+        box-sizing: border-box;
+
+        width: calc(50% - 10px);
+
+        margin: 5px;
+
+        padding: 25px;
+    }
+
+    .icono-tarjeta-producto,
+    .icono-tarjeta-disponible,
+    .icono-tarjeta-bajo,
+    .icono-tarjeta-agotado {
+        width: 40px;
+        height: 40px;
+
+        padding: 8px;
+    }
+
+    .icono-tarjeta-producto i,
+    .icono-tarjeta-disponible i,
+    .icono-tarjeta-bajo i,
+    .icono-tarjeta-agotado i {
+        font-size: 26px;
+    }
+
+
+    /* ====================== */
+    /* INFORMACIÓN TARJETAS   */
+    /* ====================== */
+
+    .contenido-tarjeta {
+        width: auto;
+        margin-right: 0;
+    }
+
+    .info-producto strong,
+    .info-disponible strong,
+    .info-bajo strong,
+    .info-agotado strong {
+        font-size: 22px;
+    }
+
+
+    /* ====================== */
+    /* CONTENEDOR TABLA       */
+    /* ====================== */
+
+    .cont-tabla {
+        box-sizing: border-box;
+
+        width: calc(100% - 40px);
+
+        height: 500px;
+
+        margin: 30px auto;
+
+        padding: 15px;
+
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+
+    /* ====================== */
+    /* HERRAMIENTAS           */
+    /* ====================== */
+
+    .busqueda {
+        width: 100%;
+    }
+
+    .herramientas {
+        box-sizing: border-box;
+
+        width: 100%;
+
+        padding: 10px;
+
+        gap: 10px;
+    }
+
+
+    /* ====================== */
+    /* BUSCADOR               */
+    /* ====================== */
+
+    .buscador {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .buscador input {
+        width: 100%;
+
+        height: 40px;
+
+        font-size: 13px;
+    }
+
+
+    /* ====================== */
+    /* SELECTOR               */
+    /* ====================== */
+
+    .selector {
+        width: 150px;
+
+        height: 40px;
+
+        font-size: 13px;
+    }
+
+
+    /* ====================== */
+    /* TABLA                  */
+    /* ====================== */
+
+    .table {
+        width: 100%;
+
+        min-width: 700px;
+
+        border-collapse: separate;
+
+        border-spacing: 0 8px;
+    }
+
+
+    /* ====================== */
+    /* ENCABEZADOS            */
+    /* ====================== */
+
+    .encabezados th {
+        padding: 11px 8px;
+
+        font-size: 13px;
+
+        white-space: nowrap;
+    }
+
+
+    /* ====================== */
+    /* FILAS                  */
+    /* ====================== */
+
+    .filas td {
+        padding: 13px 8px;
+
+        font-size: 13px;
+
+        white-space: nowrap;
+    }
+
+
+    /* ====================== */
+    /* BOTÓN VER              */
+    /* ====================== */
+
+    .btn-ver {
+        padding: 5px 9px;
+
+        font-size: 12px;
+    }
+
+}
 
 
 
