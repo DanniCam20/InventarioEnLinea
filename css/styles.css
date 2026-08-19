@@ -471,3 +471,226 @@ body{
         font-size: 15px;
     }
 }
+
+
+/* ======================================================== */
+/* VISTA TABLET                                             */
+/* 601px - 1024px                                          */
+/* ======================================================== */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* ========================= */
+    /* HEADER                    */
+    /* ========================= */
+
+    .header {
+        padding: 10px 20px;
+    }
+
+    .header img {
+        margin-left: 5px;
+        width: 60px;
+    }
+
+    .header-text {
+        margin-left: 12px;
+    }
+
+    .header h1 {
+        font-size: 19px;
+    }
+
+    .header p {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+
+    /* ========================= */
+    /* USUARIO                   */
+    /* ========================= */
+
+    .usuario {
+        margin-left: auto;
+        margin-right: 10px;
+
+        padding: 7px 10px;
+    }
+
+    .usuario > i {
+        width: 32px;
+        height: 32px;
+
+        margin-right: 8px;
+
+        font-size: 15px;
+    }
+
+    .usuario-info strong {
+        font-size: 13px;
+    }
+
+    .usuario-info span {
+        font-size: 10px;
+    }
+
+
+    /* ========================= */
+    /* CATEGORÍAS                */
+    /* ========================= */
+
+    .categoria {
+        width: calc(100% - 60px);
+
+        margin: 70px auto 20px;
+    }
+
+    .categoria h2 {
+        margin-left: 5px;
+
+        font-size: 22px;
+    }
+
+
+    /* ========================= */
+    /* MENÚ DE OPCIONES          */
+    /* ========================= */
+
+    .opciones {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: stretch;
+
+        width: calc(100% - 80px);
+
+        margin: 30px auto 60px;
+
+        padding: 15px;
+
+        gap: 20px;
+    }
+
+
+    /* ========================= */
+    /* TARJETAS                  */
+    /* ========================= */
+
+    .opcion {
+        box-sizing: border-box;
+
+        width: calc(50% - 20px);
+
+        max-width: 300px;
+
+        min-height: 230px;
+
+        padding: 30px 20px;
+
+        margin: 5px;
+
+        justify-content: flex-start;
+    }
+
+    .opcion i {
+        font-size: 42px;
+    }
+
+    .opcion h3 {
+        font-size: 17px;
+
+        margin-bottom: 5px;
+    }
+
+    .opcion p {
+        font-size: 13px;
+
+        height: 55px;
+
+        margin: 8px 0;
+    }
+
+    .opcion a {
+        font-size: 14px;
+    }
+
+
+    /* ========================= */
+    /* ACTIVIDAD RECIENTE        */
+    /* ========================= */
+
+    .actividad {
+        width: calc(100% - 80px);
+
+        margin: 50px auto;
+
+        text-align: left;
+    }
+
+    .actividad h2 {
+        font-size: 22px;
+
+        margin-left: 5px;
+    }
+
+
+    /* ========================= */
+    /* ELEMENTOS ACTIVIDAD       */
+    /* ========================= */
+
+    .actividad-item {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 14px 18px;
+
+        margin-bottom: 12px;
+    }
+
+    .actividad-item > i {
+        flex-shrink: 0;
+
+        font-size: 24px;
+
+        margin-right: 14px;
+    }
+
+    .actividad-item div {
+        min-width: 0;
+    }
+
+    .actividad-item strong {
+        font-size: 14px;
+    }
+
+    .actividad-item p {
+        font-size: 12px;
+    }
+
+    .actividad-item > span {
+        flex-shrink: 0;
+
+        font-size: 11px;
+
+        margin-left: 10px;
+    }
+
+
+    /* ========================= */
+    /* EN DESARROLLO             */
+    /* ========================= */
+
+    .en-desarrollo {
+        padding: 80px 30px;
+
+        font-size: 14px;
+    }
+
+    .en-desarrollo i {
+        font-size: 16px;
+    }
+}
