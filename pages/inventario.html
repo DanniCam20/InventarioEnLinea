@@ -12,10 +12,7 @@
     <!-- HEADER -->
     <header class="header">
 
-        <!-- ICONO VOLVER  -->
-       <a href="../index.html" class="btn-volver">
-           <i class="fi fi-sr-arrow-left"></i>
-       </a>
+         <button id="btn-toggle" class="btn-toggle abrir">☰</button>
 
         <!-- ICONO PRINCIPAL -->
         <i class="fi fi-sr-inventory-alt icono"></i>
@@ -41,6 +38,49 @@
         </div>
 
     </header>
+
+    <aside class="nav-lateral oculto" id="nav-lateral">
+
+        <button id="btn-toggle" class="btn-toggle cerrar">✕</button>
+        
+        <ul>
+            <li><a href="../index.html"> 
+                <i class="fi fi-sr-home"></i>
+                <strong>
+                    Inicio
+                </strong> 
+            </a></li>
+            
+            <li><a href="../pages/productos.html"> 
+                <i class="fi fi-sr-box-alt"></i>
+                <strong>
+                    Productos
+                </strong> 
+            </a></li>
+
+            <li><a href="../pages/inventario.html"> 
+                <i class="fi fi-sr-inventory-alt"></i>
+                <strong>
+                    Inventario
+                </strong> 
+            </a></li>
+
+            <li><a href="../pages/ventas.html">
+                <i class="fi fi-sr-shopping-cart"></i>
+                <strong>
+                    Ventas
+                </strong> 
+            </a></li>
+
+            <li><a href="../pages/clientes.html"> 
+                <i class="fi fi-sr-users"></i>
+                <strong>
+                    Clientes
+                </strong> 
+            </a></li>
+        </ul>
+    </aside>
+
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="main">     
@@ -293,6 +333,6 @@
 
     </main>
 
-<script src="../js/invantario.js"></script>
+<script src="../js/inventario.js"></script>
 </body>
 </html>

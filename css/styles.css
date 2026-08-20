@@ -112,37 +112,128 @@ body{
 
 .nav-lateral{
 
-    /* display: none; */
+  
 
     position: fixed;
     left: 0;
     top: 0;
-
     width: 290px;
     height: 100vh;
-    
     padding: 20px;
-    background-color: #d7eec6bf;
+    text-decoration: none;
+    background-color: #d7eec6fb;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
-    
-     transition: transform 0.3s ease; 
+    transition: transform 0.3s ease; 
 }
 
 .nav-lateral.oculto {
-    transform: translateX(-100%); /* La mueve completamente a la izquierda */
+    transform: translateX(-100%); 
 }
 
-.btn-toggle {
-    /* position: fixed; */
-    top: 15px;
-    left: 15px;
-    
-    padding: 10px 15px;
+.btn-toggle.abrir{
+    margin: 0;
+     padding: 10px 18px;
+    background-color: #ffffff; 
+    color: #4a6b32;
+    border: 1px solid rgba(74, 107, 50, 0.2); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
-
-    margin-bottom: 20px;
+    transition: all 0.2s ease;
 }
 
+.btn-toggle.abrir:hover {
+    background-color: rgba(74, 107, 50, 0.2);;
+    transform: scale(1.05);
+}
+
+.btn-toggle.cerrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-bottom: 25px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(217, 54, 54, 0.1); 
+    color: #d93636; 
+    border: none;
+    border-radius: 50%; 
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-toggle.cerrar:active {
+    background-color: rgba(156, 31, 31, 0.199);
+}
+
+
+/* Personalizacion de opciones */
+
+.nav-lateral ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    border-color: #1a678b;
+}
+
+.nav-lateral ul li a {
+
+    display: flex;
+    
+    text-decoration: none;
+    align-items: center;
+     padding: 10px 15px;
+    background-color: #cbdfbcb6; 
+    width: 100%;
+
+    box-sizing: border-box; 
+    margin-bottom: 10px;
+    border-radius: 6px;
+
+     
+    position: relative; 
+    overflow: hidden; 
+}
+
+.nav-lateral ul li a::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -100%; /* Lo esconde abajo del botón */
+    width: 7px; /* Grosor de la línea */
+    height: 100%;
+    background-color: rgb(51, 99, 23); /* El color verde de tus iconos */
+    transition: bottom 0.2s ease; /* Animación de deslizamiento */
+}
+
+.nav-lateral ul li a:hover::after {
+    bottom: 0; 
+}
+
+.nav-lateral ul li a:hover {
+    background-color: #a6bd96; 
+}
+
+.nav-lateral ul li a i {
+    font-size: 20px;  
+    color: rgb(51, 99, 23);
+    margin: 10px;
+     margin: 0 12px 0 0; 
+}
+
+.nav-lateral ul li strong {
+    font-size: 16.9px;  
+    color: rgb(51, 99, 23);
+    margin: 0;
+    margin-left: 0;
+}
+
+ 
 
 
 /* ==================== */
@@ -187,19 +278,7 @@ body{
 }
 
 .opcion{
-    /* background-color: #d7eec6bf;
-    border-radius: 10px;
-    padding: 40px;
-    margin: 10px auto;
-    width: 150px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.5s ease; */
-
+    
     display: flex;
     flex-wrap: wrap;
     gap:10px;
@@ -222,8 +301,6 @@ body{
 .opcion i {
     font-size: 35px;
     color: rgb(51, 99, 23);
-    
-
 }
 
 .opcion h3{
@@ -312,41 +389,6 @@ body{
 .actividad-item:hover {
     transform: translateX(5px);
     box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
-}
-
-
-
-/* ============== */
-/* EN DESARROLLO  */
-/* ============== */
-
-.en-desarrollo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-
-    color: #666;
-    font-size: 14px;
-
-    padding:100px;
-
-   
-}
-
-.en-desarrollo i {
-    font-size: 16px;
-    animation: girar 1.5s linear infinite;
-}
-
-@keyframes girar {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 
