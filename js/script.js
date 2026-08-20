@@ -1,9 +1,10 @@
-
-const btnToggle = document.getElementById('btn-toggle');
+// Selecciona todos los botones con esa clase
+const botonesToggle = document.querySelectorAll('.btn-toggle');
 const navLateral = document.getElementById('nav-lateral');
 
-btnToggle.addEventListener('click', () => {
-    // "toggle" agrega la clase si no existe, o la quita si ya existe
-    navLateral.classList.toggle('oculto');
+// Recorre cada botón y le asigna la función de abrir/cerrar
+botonesToggle.forEach(boton => {
+    boton.addEventListener('click', () => {
+        navLateral.classList.toggle('oculto');
+    });
 });
-

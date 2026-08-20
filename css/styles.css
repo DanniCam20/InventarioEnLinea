@@ -112,7 +112,7 @@ body{
 
 .nav-lateral{
 
-    display: none;
+    /* display: none; */
 
     position: fixed;
     left: 0;
@@ -133,12 +133,14 @@ body{
 }
 
 .btn-toggle {
-    position: fixed;
+    /* position: fixed; */
     top: 15px;
     left: 15px;
-    z-index: 1000; /* Asegura que el botón quede siempre arriba */
+    
     padding: 10px 15px;
     cursor: pointer;
+
+    margin-bottom: 20px;
 }
 
 
