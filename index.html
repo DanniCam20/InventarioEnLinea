@@ -12,6 +12,8 @@
     <!-- HEADER -->
     <header class="header">
 
+        <button id="btn-toggle" class="btn-toggle">☰ Menú</button>
+
         <!-- LOGO -->
         <img src="assets/icons/logo_solo.png" alt="Logo">
 
@@ -40,6 +42,18 @@
 
     </header>
 
+    <aside class="nav-lateral" id="nav-lateral">
+
+        
+
+        <ul>
+            <li><a href="pages/productos.html"> Productos </a></li>
+            <li><a href="pages/inventario.html"> Inventario </a></li>
+            <li><a href="pages/ventas.html"> Ventas </a></li>
+            <li><a href="pages/clientes.html"> Clientes </a></li>
+        </ul>
+    </aside>
+
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="main">
@@ -55,33 +69,33 @@
         <!-- MENU DE OPCIONES -->
         <div class="opciones"> 
             
-            <div class="opcion">
+            <a href="pages/productos.html" class="opcion">
                 <i class="fi fi-sr-box-alt"></i>
                 <h3>
-                    Agregar Productos
+                    Productos
                 </h3>
                 <p>
-                    Gestiona los productos registrados
+                    Gestiona tus productos
                 </p>
-                <a href="pages/productos.html">
-                    Ir a Productos
-                </a>
-            </div>
 
-            <div class="opcion">
+                <!-- Ir a Productos -->
+                
+            </a>
+
+            <a href="pages/inventario.html" class="opcion">
                 <i class="fi fi-sr-inventory-alt"></i>
                 <h3>
-                    Ir a Inventario
+                    Inventario
                 </h3>
                 <p>
-                    Consulta el estado del inventario
+                    Consulta el inventario
                 </p>
-                <a href="pages/inventario.html">
-                    Ir a Inventario
-                </a>
-            </div>
+                
+                <!-- Ir a Inventario -->
+        
+            </a>
 
-            <div class="opcion">
+            <a href="pages/ventas.html" class="opcion">
                 <i class="fi fi-sr-shopping-cart"></i>
                 <h3>
                     Ventas
@@ -89,30 +103,30 @@
                 <p>
                     Registra y consulta ventas
                 </p>
-                <a href="pages/ventas.html">
-                    Ir a Ventas
-                </a>
-            </div>
+                
+                <!-- Ir a Ventas -->
+            
+            </a>
 
-            <div class="opcion">
+            <a href="pages/clientes.html" class="opcion">
                 <i class="fi fi-sr-users"></i>
                 <h3>
-                    Ir a Clientes 
+                    Clientes 
                 </h3>
                 <p>
                     Administra tus clientes
                 </p>
-                <a href="pages/clientes.html">
-                    Ir a Clientes
-                </a>
-            </div>          
+                
+                <!-- Ir a Clientes -->
+                
+            </a>          
 
         </div>
 
-        <!-- ACTIVIDADES RECIENTES  -->
+        <!-- ACTIVIDADES RECIENTES 
         <div class="actividad">
 
-            <!-- CATEORIA ACTIVIDAD RECIENTE -->
+            CATEORIA ACTIVIDAD RECIENTE
             <div class="categoria">
                 <h2>
                  Actividad Reciente 
@@ -148,7 +162,7 @@
 
         </div>
 
-        <!-- CATEORIA OTRAS OPCIONES -->
+        CATEORIA OTRAS OPCIONES
         <div class="categoria">
             <h2>
                 Otras opciones
@@ -158,11 +172,9 @@
         <div class="en-desarrollo">
             <i class="fi fi-sr-loading"></i>
              <span>En desarrollo...</span>
-        </div> 
+        </div>  -->
 
     </main>
-
-    
 
 <script src="js/script.js"></script>
 </body>

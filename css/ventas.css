@@ -38,6 +38,7 @@ body {
     margin-left: 12px;
     margin-right: 20px;
 
+
     text-decoration: none;
 
     transition: all 0.3s ease;
@@ -52,6 +53,7 @@ body {
 .btn-volver i {
     font-size: 18px;
     color: rgb(8, 99, 23);
+    margin-top: 5px;
 }
 
 

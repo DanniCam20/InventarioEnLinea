@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     text-align: center;
@@ -100,6 +106,43 @@ body{
     margin-top: 2px;
 }
 
+/* ========================= */
+/* Barra latera              */
+/* ========================= */
+
+.nav-lateral{
+
+    /* display: none; */
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 290px;
+    height: 100vh;
+    
+    padding: 20px;
+    background-color: #d7eec6bf;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    
+     transition: transform 0.3s ease; 
+}
+
+.nav-lateral.oculto {
+    transform: translateX(-100%); /* La mueve completamente a la izquierda */
+}
+
+.btn-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000; /* Asegura que el botón quede siempre arriba */
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+
 /* ==================== */
 /* Titulos Categorias */
 /* ==================== */
@@ -132,7 +175,7 @@ body{
 
 .opciones{
     display: flex;
-    background-color: #cbdfbc21;
+    /* background-color: #cbdfbc21; */
     border-radius: 20px;
     justify-content: center;
     padding: 10px;
@@ -142,17 +185,31 @@ body{
 }
 
 .opcion{
-    background-color: #d7eec6bf;
+    /* background-color: #d7eec6bf;
     border-radius: 10px;
     padding: 40px;
     margin: 10px auto;
-    width: 130px;
+    width: 150px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease; */
+
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+
+    background-color: #d7eec6bf;
+    width: 35vh;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: left;
+    padding: 15px;
+
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
     transition: all 0.5s ease;
 }
 
@@ -161,31 +218,25 @@ body{
 }
 
 .opcion i {
-    font-size: 45px;
+    font-size: 35px;
+    color: rgb(51, 99, 23);
+    
+
 }
 
 .opcion h3{
     font-weight: bold;
     color: rgb(8, 99, 23);
-    margin-top: 0;
+    margin: 0;
 }
 
 .opcion p{
-    font-weight: normal;
-    font-size: 14px;
-    height: 55px;
-    margin: 10px 0;
-    color: #666;
-}
 
-.opcion a{
-    font-weight: bold;
-    display: inline-block;
-    margin-top: auto;
-    color: rgb(8, 99, 23);
-    border-radius: 6px;
-    padding: 5px 10px;
-    text-decoration: none;
+    flex-basis: 100%;
+    margin: -35px 0 0 45px;
+
+    font-size: 13.5px;
+    color: #666;
 }
 
 
