@@ -112,7 +112,7 @@ body{
 
 .nav-lateral{
 
-    /* display: none; */
+    display: none;
 
     position: fixed;
     left: 0;
