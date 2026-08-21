@@ -8,4 +8,3 @@ botonesToggle.forEach(boton => {
         navLateral.classList.toggle('oculto');
     });
 });
-

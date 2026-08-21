@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="css/styles.css">
-     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+     <link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css" rel="stylesheet">
+
     <title>Inicio | Dashboard</title>
 </head>
 <body>
 
-    <!-- HEADER -->
+
     <header class="header">
 
         <button id="btn-toggle" class="btn-toggle abrir">☰</button>
 
         <!-- LOGO -->
-        <img src="assets/icons/logo_solo.png" alt="Logo">
+        <img src="../assets/icons/logo_solo.png" alt="Logo">
 
         <!-- INFORMACION -->
         <div class="header-text">
@@ -47,6 +48,13 @@
         <button id="btn-toggle" class="btn-toggle cerrar">✕</button>
         
         <ul>
+            <li><a href="../index.html"> 
+                <i class="fi fi-sr-home"></i>
+                <strong>
+                    Inicio
+                </strong> 
+            </a></li>
+            
             <li><a href="pages/productos.html"> 
                 <i class="fi fi-sr-box-alt"></i>
                 <strong>
@@ -72,6 +80,18 @@
                 <i class="fi fi-sr-users"></i>
                 <strong>
                     Clientes
+                </strong> 
+            </a></li>
+            <li><a href="pages/categorias.html"> 
+                <i class="fi fi-ss-category"></i>
+                <strong>
+                    Categorias
+                </strong> 
+            </a></li>
+            <li><a href="pages/proveedores.html"> 
+                <i class="fi fi-br-supplier-alt"></i>
+                <strong>
+                    Proveedores
                 </strong> 
             </a></li>
         </ul>
@@ -142,63 +162,41 @@
                 
                 <!-- Ir a Clientes -->
                 
-            </a>          
+            </a>     
 
+            <a href="pages/categorias.html" class="opcion">
+                <i class="fi fi-ss-category"></i>
+                <h3>
+                    Categorias 
+                </h3>
+                <p>
+                    Administra Categorias
+                </p>
+                
+                <!-- Ir a Categorias -->
+                
+            </a>     
+                 
+            <a href="pages/proveedores.html" class="opcion">
+                <i class="fi fi-br-supplier-alt"></i>
+                
+                <h3>
+                    Proveedores 
+                </h3>
+                <p>
+                    Registra Proveedores
+                </p>
+                
+                <!-- Ir a Categorias -->
+                
+            </a>        
+    
         </div>
-
-        <!-- ACTIVIDADES RECIENTES 
-        <div class="actividad">
-
-            CATEORIA ACTIVIDAD RECIENTE
-            <div class="categoria">
-                <h2>
-                 Actividad Reciente 
-                </h2>
-            </div>
-
-            <div class="actividad-item">
-                <i class="fi fi-sr-box-alt"></i>
-                <div>
-                    <strong>Producto agregado</strong>
-                    <p>Teclado inalámbrico</p>
-                </div>
-                <span>10 min</span>
-            </div>
-
-            <div class="actividad-item">
-                <i class="fi fi-sr-shopping-cart"></i>
-                <div>
-                    <strong>Nueva venta</strong>
-                    <p>Venta #00125</p>
-                </div>
-                <span>25 min</span>
-            </div>
-
-            <div class="actividad-item">
-                <i class="fi fi-sr-user-add"></i>
-                <div>
-                    <strong>Nuevo cliente</strong>
-                    <p>Carlos Pérez</p>
-                </div>
-                <span>1 hora</span>
-            </div>
-
-        </div>
-
-        CATEORIA OTRAS OPCIONES
-        <div class="categoria">
-            <h2>
-                Otras opciones
-            </h2>
-        </div>
-
-        <div class="en-desarrollo">
-            <i class="fi fi-sr-loading"></i>
-             <span>En desarrollo...</span>
-        </div>  -->
 
     </main>
 
-<script src="js/script.js"></script>
+   
+    <script src="js/script.js"></script>
+
 </body>
 </html>

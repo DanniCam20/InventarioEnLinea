@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/ventas.css">
     <title>Ventas | Dasboard</title>
 </head>
@@ -13,10 +12,7 @@
     <!-- HEADER -->
     <header class="header">
 
-        <!-- ICONO VOLVER  -->
-       <a href="../index.html" class="btn-volver">
-           <i class="fi fi-sr-arrow-left"></i>
-       </a>
+        <button id="btn-toggle" class="btn-toggle abrir">☰</button>
 
         <!-- ICONO PRINCIPAL -->
         <i class="fi fi-sr-inventory-alt icono"></i>
@@ -42,6 +38,60 @@
         </div>
 
     </header>
+
+    <aside class="nav-lateral oculto" id="nav-lateral">
+
+        <button id="btn-toggle" class="btn-toggle cerrar">✕</button>
+        
+        <ul>
+            <li><a href="../index.html"> 
+                <i class="fi fi-sr-home"></i>
+                <strong>
+                    Inicio
+                </strong> 
+            </a></li>
+            
+            <li><a href="../pages/productos.html"> 
+                <i class="fi fi-sr-box-alt"></i>
+                <strong>
+                    Productos
+                </strong> 
+            </a></li>
+
+            <li><a href="../pages/inventario.html"> 
+                <i class="fi fi-sr-inventory-alt"></i>
+                <strong>
+                    Inventario
+                </strong> 
+            </a></li>
+
+            <li><a href="../pages/ventas.html">
+                <i class="fi fi-sr-shopping-cart"></i>
+                <strong>
+                    Ventas
+                </strong> 
+            </a></li>
+
+            <li><a href="../pages/clientes.html"> 
+                <i class="fi fi-sr-users"></i>
+                <strong>
+                    Clientes
+                </strong> 
+            </a></li>
+            <li><a href="pages/categorias.html"> 
+                <i class="fi fi-ss-category"></i>
+                <strong>
+                    Categorias
+                </strong> 
+            </a></li>
+            <li><a href="pages/proveedores.html"> 
+                <i class="fi fi-br-supplier-alt"></i>
+                <strong>
+                    Proveedores
+                </strong> 
+            </a></li>
+        </ul>
+    </aside>
 
     <!-- ========================= -->
     <!-- CONTENIDO PRINCIPAL       -->
@@ -454,5 +504,6 @@
 
 
     </main>
+<script src="../js/ventas.js"></script>
 </body>
 </html>

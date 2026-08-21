@@ -111,9 +111,6 @@ body{
 /* ========================= */
 
 .nav-lateral{
-
-  
-
     position: fixed;
     left: 0;
     top: 0;
@@ -122,6 +119,7 @@ body{
     padding: 20px;
     text-decoration: none;
     background-color: #d7eec6fb;
+    z-index: 9999; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
     transition: transform 0.3s ease; 
 }
@@ -268,12 +266,15 @@ body{
 
 .opciones{
     display: flex;
+    /* width: 1350px auto; */
     /* background-color: #cbdfbc21; */
     border-radius: 20px;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 10px;
-    margin: 100px;
-    margin-top: 0;
+    margin: 40px 65px;
+    
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
     gap: 20px;
 }
 
@@ -284,7 +285,7 @@ body{
     gap:10px;
 
     background-color: #d7eec6bf;
-    width: 35vh;
+    width: 250px;
     border-radius: 10px;
     text-decoration: none;
     text-align: left;
