@@ -10,7 +10,6 @@ body {
     margin: 0;
     text-align: center;
     background-color: #cbdfbc21;
-    font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
@@ -31,44 +30,6 @@ body {
 }
 
 
-/* ====================== */
-/* BOTÓN VOLVER           */
-/* ====================== */
-
-.btn-volver {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 25px;
-    height: 25px;
-
-    margin-left: 12px;
-    margin-right: 20px;
-
-    background-color: aliceblue;
-
-    border-radius: 50%;
-
-    text-decoration: none;
-
-    flex-shrink: 0;
-
-    transition: all 0.3s ease;
-}
-
-.btn-volver:hover {
-    background-color: rgba(46, 187, 69, 0.199);
-    transform: translateY(-3px) scale(1.02);
-}
-
-.btn-volver i {
-    margin-top: 5px;
-
-    font-size: 18px;
-
-    color: rgb(8, 99, 23);
-}
 
 
 /* ====================== */

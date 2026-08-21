@@ -10,7 +10,6 @@ body {
     margin: 0;
     text-align: center;
     background-color: #cbdfbc21;
-    font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
@@ -30,44 +29,6 @@ body {
 }
 
 
-/* ====================== */
-/* BOTÓN VOLVER           */
-/* ====================== */
-
-.btn-volver {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 25px;
-    height: 25px;
-
-    margin-left: 12px;
-    margin-right: 20px;
-
-    background-color: aliceblue;
-
-    border-radius: 50%;
-
-    text-decoration: none;
-
-    flex-shrink: 0;
-
-    transition: all 0.3s ease;
-}
-
-.btn-volver:hover {
-    background-color: rgba(46, 187, 69, 0.199);
-    transform: translateY(-3px) scale(1.02);
-}
-
-.btn-volver i {
-    margin-top: 5px;
-
-    font-size: 18px;
-
-    color: rgb(8, 99, 23);
-}
 
 
 /* ====================== */
@@ -299,3 +260,140 @@ body {
     margin: 0;
     margin-left: 0;
 }
+
+
+/* ======================================================== */
+/* FORMULARIO                                                */
+/* ======================================================== */
+
+.formulario-clientes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    width: 100%;
+
+    margin: 40px auto;
+}
+
+.cont-formulario {
+
+    
+    width: 350px;
+
+    height: 70px;
+
+    margin: 20px 0;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background-color: #d4f0be60;
+
+    flex-shrink: 0;
+}
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.campo label {
+    font-weight: 800;
+
+    text-align: left;
+}
+
+
+.input{
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #a1c247;
+}
+
+
+/* ======================================================== */
+/* BOTÓN GUARDAR                                             */
+/* ======================================================== */
+
+.btn-registrar {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    margin-bottom: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #a1c247;
+
+    color: rgb(8, 99, 23);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+
+    transition: all 0.3s ease;
+}
+
+.btn-registrar:hover {
+    background-color: #91b33d;
+
+    transform: translateY(-4px) scale(1.02);
+}
+
+
+/* ======================================================== */
+/* MENSAJE                                                   */
+/* ======================================================== */
+
+.mensaje {
+    display: none;
+
+    padding: 10px;
+
+    border: 1px solid #368a48;
+
+    border-radius: 8px;
+
+    background-color: #d4f0be;
+
+    color: rgb(8, 99, 23);
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
